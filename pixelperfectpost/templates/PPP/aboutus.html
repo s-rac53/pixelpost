@@ -1,0 +1,157 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<title>PixelPerfectPost- VFX Services </title>
+
+
+<meta name="keywords" content="Online Stitching, online tailoring service, online tailors, Custom-made suits, bespoke stitching, unisex stitching, custom bulk stitching, Custom-made blouse, Custom-made salwars,Custom-made patialas, bulk order stitching, bulk order tees, bulk order hoodies, custom design clothes, low cost, budget friendly, pocket friendly ">
+
+    <meta name="description" content="Online tailoring store where tailor visits your house to take measurements(Bangalore only). Stitching for clothes materials(All over India). Stitching for men's suits ladies blouse, suits, chudidar and salwars. ">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+<style>
+    
+    .top-menus {
+        text-decoration: none;
+        color:whitesmoke;
+        font-size: 1.8vmin;
+        
+    }
+
+    main {
+        margin-left: 25%; 
+        z-index: 10; 
+        margin-top: 100px;
+    }
+
+    section {
+        line-height: 22px; 
+        color: whitesmoke; 
+        font-size: 2.2vmin; 
+        margin-top: 50px;
+         width: 70%;
+    }
+
+    footer {
+        position:relative;
+         bottom: 0px;
+          color: cornsilk;
+            height: 45vh;
+             padding: 15px;
+    }
+
+    .divider {
+        position: absolute; 
+        float: right;
+          width: 1px;
+           background-color: cornsilk;
+            opacity: 0.2;
+             bottom: 10%;
+              height: 45%;
+    }
+
+    .subs-footers {
+        position: absolute;
+         width: 20%; 
+         top: 50%;
+    }
+
+    .footer-heading {
+        color: cornsilk;
+         font-size: 2.5vmin;
+          margin:0px;
+    }
+       
+            
+            
+        
+    
+</style>
+{% endblock %}
+
+
+{% block body %}
+<!--Navigational links-->
+<nav style="position:fixed; top: 20px; right: 3%;">
+    <i class="fas fa-angle-right" style="color: rgba(245, 245, 245, 0.452);"></i> <a class="top-menus"  href="{% url 'services' %}" >SERVICES</a><br>
+    <i class="fas fa-angle-right" style="color: rgba(245, 245, 245, 0.452)"></i> <a class="top-menus"  href="{% url 'portfolio' %} ">PORTFOLIO</a><br>
+    <i class="fas fa-angle-right" style="color: rgba(245, 245, 245, 0.452)"></i> <a  class="top-menus"   href="{% url 'works' %} ">REELS</a><br>
+    <i class="fas fa-angle-right" style="color: rgba(245, 245, 245, 0.452)"></i> <a  class="top-menus"   href="{% url 'contact'  %}" >CONTACT</a><br>
+</nav>
+
+
+
+<main> <!--Main content begins-->
+    <img src="{% static 'PPP Logo.png' %}" width="100" height="150" style="margin-left: 30%; " >
+
+    <section>
+       <i> PixelPerfectPost, where every pixel has a story to tell.<br>
+        PixelPerfectPost is a novice VFX player which set foot in 2019 as a sister company to VFX giant <a style="color: white; text-decoration: none;" target="_blank" href="https://www.massivevfxstudios.com/about"><b>Massive VFX Studios</b></a>.
+        Run by a bunch of seasoned entrepreneurial hands, Massive VFX saw the need to spread it's wings further to undertake a new outlook resulting in the conception of <abbr title="PixelPerfectPost">PPP</abbr>. <br>
+        &nbsp &nbsp We at <abbr title="PixelPerfectPost">PPP</abbr> call ourselves pixelheads.<br> 
+        We take pride in each of us for we come together with uniqueness and diversity to frame the very skin and bones of our company. With our new branch in motion, we're often asked the question, "What was the requisite to birth <abbr title="PixelPerfectPost">PPP</abbr> and how would we like to nuture it?"<br>
+        &nbsp &nbsp Our reply is inspired by a great deal of fortitude as, as everchanging as the VFX business gets, the only non-impetuous virtue it bears is the perpectual creativity alongside technology and we endeavour to cushion and study the very pace of it.
+        <abbr title="PixelPerfectPost">PPP</abbr> is driven to study every intricacies and nuances of the magnum changes in the VFX realm and to survive art in its humble form.</i><br><br><br>
+        CCHHEEEEEEEEEEEEESSYY... <br><br><br>
+       <p style="font-family: 'Pangolin', cursive;"> Our pixelheads are working on bringing together cool tech. and awesome creativity to impress our ever awesome clients! We come together to create and recreate amazing works that'll just keep you wanting for more. <abbr title="PixelPerfectPost">PPP</abbr> was started to excite the VFX world with our charged pixelheads who just have one thing in mind, to create unreal stuffs, or is it real? really!<br> 
+        Enough said, please do check out  <a style="color: white; text-decoration: none;" target="_blank" href="https://www.massivevfxstudios.com/contactus"><b>Massive VFX Studios</b></a> for a white tie evening and banter or <a style="color: white; text-decoration: none;" target="_blank" href="{% url 'contact' %}"><b>hit us up right away to get rocking with our pixelheads!</b></a> </p>
+
+       </section>
+   
+</main>
+<!--Main content ends-->
+
+
+
+<!--Footer begins-->
+<footer>
+    <div class="subs-footers" style="left: 10%;">
+    <h3 class="footer-heading">CONTACT</h3>
+    <address style="color: cornsilk; font-size: 2vmin; margin-top: 10px"> <!--Company address-->
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
+         Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
+         Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
+    </address>
+        </div>
+
+
+
+    <div class="divider" style="left: 33%;"> <!--Divider of footer-->
+    </div>
+
+
+
+     <div class="subs-footers" style="left: 40%;">  <!--Social Media links-->
+    <h3 class="footer-heading">SOCIALS</h3>
+     <div style="color: cornsilk; font-size: 1.8vmin; margin-top: 10px">
+        <span><img src="{% static 'PPP instagram.png' %}" alt="Instagram icon" height="20px" width="20px" style="margin-right: 5px"> </span> <!--Instagram link-->
+        <span><img src="{% static 'PPP twitter.png' %}" alt="Twitter icon" height="20px" width="20px" style="margin-right: 5px"> </span> <!--Twitter link-->
+        <span><img src="{% static 'PPP vimeo.png' %}" alt="Vimeo icon" height="20px" width="20px" style="margin-right: 5px"> </span> <!--Vimeo link-->
+         <span><img src="{% static 'PPP whatsapp.png' %}" alt="Whatsapp icon" height="20px" width="20px" style="margin-right: 5px"> </span> <!--Whatsapp link-->
+    </div>
+        </div>
+
+
+
+    <div class="divider" style=" left: 64%;"> <!--Divider of footer-->
+    </div>
+
+
+
+     <div  class="subs-footers" style="left: 71%; width:10%">  <!--MassiveVFX Social Media links-->
+    <h3 class="footer-heading">PARENT COMPANY </h3>
+    <div style="color: cornsilk; font-size: 2vmin; margin-top: 10px">
+        <p><i class="fas fa-angle-right" style="color: whitesmoke"></i>
+            <a href="https://www.massivevfxstudios.com/" target="_blank" style="text-decoration: none">Massive VFX Studios</a></p> <!--MassiveVFX Website link-->
+         <div style="color: cornsilk; font-size: 1.8vmin; margin-top: 10px">
+        <span><img src="{% static 'PPP instagram.png' %}" alt="Instagram icon" height="20px" width="20px" style="margin-right: 5px"> </span> <!--MassiveVFX Instagram link-->
+        <span><img src="{% static 'PPP twitter.png' %}" alt="Twitter icon" height="20px" width="20px" style="margin-right: 5px"> </span>  <!--MassiveVFX Twitter link-->
+        <span><img src="{% static 'PPP vimeo.png' %}" alt="Vimeo icon" height="20px" width="20px" style="margin-right: 5px"> </span>  <!--MassiveVFX Vimeo link-->
+         <span><img src="{% static 'PPP whatsapp.png' %}" alt="Whatsapp icon" height="20px" width="20px" style="margin-right: 5px"> </span> <!--MassiveVFX Whatsapp link-->
+    </div>
+    </div>
+        </div>
+</footer>
+<!--Footer ends-->
+
+{% endblock %}

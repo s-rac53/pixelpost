@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <style>
+           * {
+box-sizing: border-box;
+}
+
+main {
+animation-duration: 2.5s;
+animation-name: changeBackground;
+animation-iteration-count: infinite;
+animation-direction:normal;
+animation-timing-function: ease-in-out;
+
+}
+
+@keyframes changeBackground {
+0% {
+background: linear-gradient(45deg, #03070c 0%,#07121d 50%,#0a2334 63%,#184267 85%, #176485 95%, #176485cc 100%); /* W3C */
+}
+10% {
+background: linear-gradient(55deg, #03070c 0%,#07121d 50%,#0a2334 63%,#184267 85%, #176485 95%, #176485cc 100%); /* W3C */
+}
+20% {
+background: linear-gradient(55deg, #03070c 0%,#07121d 50%,#0a2334 63%,#184267 85%, #176485 95%, #176485cc 100%); /* W3C */
+}
+30% {
+background: linear-gradient(65deg, #03070c 0%,#07121d 50%,#0a2334 63%,#184267 85%, #176485 95%, #176485cc 100%); /* W3C */
+}
+40% {
+background: linear-gradient(65deg, #03070c 0%,#07121d 50%,#0a2334 63%,#184267 85%, #176485 95%, #176485cc 100%); /* W3C */
+}
+50% {
+background: linear-gradient(70deg, #03070c 0%,#07121d 50%,#0a2334 63%,#184267 85%, #176485 95%, #176485cc 100%); /* W3C */
+}
+60% {
+background: linear-gradient(65deg, #03070c 0%,#07121d 50%,#0a2334 63%,#184267 85%, #176485 95%, #176485cc 100%); /* W3C */
+}
+70% {
+background: linear-gradient(65deg, #03070c 0%,#07121d 50%,#0a2334 63%,#184267 85%, #176485 95%, #176485cc 100%); /* W3C */
+}
+80% {
+background: linear-gradient(55deg, #03070c 0%,#07121d 50%,#0a2334 63%,#184267 85%, #176485 95%, #176485cc 100%); /* W3C */
+}
+90% {
+background: linear-gradient(55deg, #03070c 0%,#07121d 50%,#0a2334 63%,#184267 85%, #176485 95%, #176485cc 100%); /* W3C */
+}
+100% {
+background: linear-gradient(45deg, #03070c 0%,#07121d 50%,#0a2334 63%,#184267 85%, #176485 95%, #176485cc 100%); /* W3C */
+}
+}
+
+
+#cool-hover{
+width: 90%;
+height: 30%;
+display: block;
+border-radius: 10px;
+box-shadow: 0 0 15px rgba(0,0,0,0.3);
+transition: all 0.5s;
+position: relative;
+overflow: hidden;
+margin-left:5%;
+margin-top:15px;
+
+}
+#cool-hover:before{
+border-radius: inherit;
+display: block;
+width: 1000%;
+height: 1000%;
+content: '';
+position: absolute;
+top: 0; 
+left: 0;
+background: linear-gradient(145deg, black 20%, cornsilk 80%); 
+opacity: 0.5;
+transition: all 0.5s;
+transform: translate(-35%, -30%);
+z-index: 0;
+animation-duration: 2.5s;
+animation-name: changeDivBackground;
+animation-iteration-count: infinite;
+animation-direction:normal;
+animation-timing-function: ease-in-out;
+}
+#cool-hover:after{
+border-radius: 9px;
+display: block;
+width: 108px;
+height: 108px;
+content: '';
+margin: 6px;
+background-size: cover;
+position: absolute;
+top: 0; left: 0;
+z-index: 1;
+}
+#cool-hover:hover:before{
+transform: translate(-50%, -50%) rotate(-180deg);
+}
+
+@keyframes changeDivBackground {
+
+    0% {
+    transform: translate(-50%, -70%) rotate(180deg);
+}
+
+}
+10% {
+    transform: translate(-50%, -50%) rotate(-190deg);
+}
+
+    50% {
+transform: translate(-40%, -50%) rotate(-20deg);
+}
+
+100% {
+    transform: translate(-40%, -60%) rotate(180deg);
+}
+
+}
+
+#cool-hover:hover{
+box-shadow: 0 0 35px rgba(0,0,0,0.3);
+}
+
+        </style>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div style="height: 100vh; width:100%; border:1px black solid; position: absolute; top:0px; left:0px; background-color:white;"> </div>
+        <main style="position:absolute; width:100%; top:100vh; left:0px; margin:0px; background-color: white;"> 
+<div id="cool-hover"><p style="transform: scale(.25, 1);font-size: 5vw;font-family: 'Press Start 2P', cursive; text-align: center; width:100%;color:rgba(207, 104, 20, 0.438) "> PIXEL PERFECT POST </p> </div>
+
+
+
+<div style="background-color:rgba(255,255,255,0.2); box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); width:99%; margin-left: 0.5%;">
+<p style="z-index:5;margin-top:20px; text-align:center; color: white; width:90%; padding:15px; "> Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
+
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
+
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
+
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
+
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
+
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
+
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
+
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
+
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
+
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
+ </p>
+ </div>
+</main>
+
+
+
+
+        
+        <script src="" async defer></script>
+    </body>
+</html>

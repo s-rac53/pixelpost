@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<style>
+
+
+ .top-menus {
+        text-decoration: none;
+        color:whitesmoke;
+        font-size: 1.6vmin;
+        text-transform: uppercase;
+        
+        
+    }
+
+    .video-elements {
+        margin-right: 25px; 
+        margin-bottom: 25px;
+    }
+
+    main {
+        margin-left:60px; 
+        margin-bottom: 50px;
+    }
+
+    .main-div {
+        margin-left: 25%;
+         z-index: 10;
+          margin-top: 100px;
+    }
+
+    footer {
+        position:relative;
+         bottom: 0px;
+          color: cornsilk;
+            height: 45vh;
+             padding: 15px;
+    }
+
+    .divider {
+        position: absolute; 
+        float: right;
+          width: 1px;
+           background-color: cornsilk;
+            opacity: 0.2;
+             bottom: 10%;
+              height: 45%;
+    }
+
+    .subs-footers {
+        position: absolute;
+         width: 20%; 
+         top: 50%;
+    }
+
+    .footer-heading {
+        color: cornsilk;
+         font-size: 2.5vmin;
+          margin:0px;
+    }
+</style>
+{% endblock %}
+
+
+{% block body %}    <!--Navigational links-->
+<nav style="position:fixed; top: 20px; right: 1%;">
+   
+    <i class="fas fa-angle-right" style="color: rgba(245, 245, 245, 0.452)"></i> <a class="top-menus"  href="{% url 'portfolio' %} ">Explore portfolio</a><br>
+    <i class="fas fa-angle-right" style="color: rgba(245, 245, 245, 0.452)"></i> <a  class="top-menus"   href="{% url 'services' %} ">Checkout services</a><br>
+    <i class="fas fa-angle-right" style="color: rgba(245, 245, 245, 0.452)"></i> <a  class="top-menus"   href="{% url 'contact'  %}" >Let's connect!</a><br>
+     <i class="fas fa-angle-right" style="color: rgba(245, 245, 245, 0.452);"></i> <a class="top-menus"  href="{% url 'about' %}" >Our story..</a><br>
+</nav>
+
+
+<!--Main Content begins-->
+<div class="main-div">
+    <h2 style="color:rgba(207, 104, 20, 0.438) ; width: 70%;"><b>HERE'S A SNIPPET OF OUR VFX REEL COLLECTION THAT ENCAPSULATES OUR DEXTIRITY!</b></h3>
+        <main>
+    {% for work in works %}
+      {% if work.video %}
+        <video class="video-elements" style="border: none;" src="{{work.video.url}}" width="50%" height="50%" controls></video>
+      {% else %}  
+        <iframe class="video-elements" src="{{link}}" controls width="50%" height="50%"></iframe>
+
+      {% endif %}
+    {% endfor %}
+</main>
+          
+</div> <!--Main Content ends-->
+
+
+<!--Footer begins-->
+<footer>
+    <div class="subs-footers" style="left: 10%;">
+    <h3 class="footer-heading">CONTACT</h3>
+    <address style="color: cornsilk; font-size: 2vmin; margin-top: 10px"> <!--Company address-->
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
+         Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
+         Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
+    </address>
+        </div>
+
+
+
+    <div class="divider" style="left: 33%;"> <!--Divider of footer-->
+    </div>
+
+
+
+     <div class="subs-footers" style="left: 40%;">  <!--Social Media links-->
+    <h3 class="footer-heading">SOCIALS</h3>
+     <div style="color: cornsilk; font-size: 1.8vmin; margin-top: 10px">
+        <span><img src="{% static 'PPP instagram.png' %}" alt="Instagram icon" height="20px" width="20px" style="margin-right: 5px"> </span> <!--Instagram link-->
+        <span><img src="{% static 'PPP twitter.png' %}" alt="Twitter icon" height="20px" width="20px" style="margin-right: 5px"> </span> <!--Twitter link-->
+        <span><img src="{% static 'PPP vimeo.png' %}" alt="Vimeo icon" height="20px" width="20px" style="margin-right: 5px"> </span> <!--Vimeo link-->
+         <span><img src="{% static 'PPP whatsapp.png' %}" alt="Whatsapp icon" height="20px" width="20px" style="margin-right: 5px"> </span> <!--Whatsapp link-->
+    </div>
+        </div>
+
+
+
+    <div class="divider" style=" left: 64%;"> <!--Divider of footer-->
+    </div>
+
+
+
+     <div  class="subs-footers" style="left: 71%; width:10%">  <!--MassiveVFX Social Media links-->
+    <h3 class="footer-heading">PARENT COMPANY </h3>
+    <div style="color: cornsilk; font-size: 2vmin; margin-top: 10px">
+        <p><i class="fas fa-angle-right" style="color: whitesmoke"></i>
+            <a href="https://www.massivevfxstudios.com/" target="_blank" style="text-decoration: none">Massive VFX Studios</a></p> <!--MassiveVFX Website link-->
+         <div style="color: cornsilk; font-size: 1.8vmin; margin-top: 10px">
+        <span><img src="{% static 'PPP instagram.png' %}" alt="Instagram icon" height="20px" width="20px" style="margin-right: 5px"> </span> <!--MassiveVFX Instagram link-->
+        <span><img src="{% static 'PPP twitter.png' %}" alt="Twitter icon" height="20px" width="20px" style="margin-right: 5px"> </span>  <!--MassiveVFX Twitter link-->
+        <span><img src="{% static 'PPP vimeo.png' %}" alt="Vimeo icon" height="20px" width="20px" style="margin-right: 5px"> </span>  <!--MassiveVFX Vimeo link-->
+         <span><img src="{% static 'PPP whatsapp.png' %}" alt="Whatsapp icon" height="20px" width="20px" style="margin-right: 5px"> </span> <!--MassiveVFX Whatsapp link-->
+    </div>
+    </div>
+        </div>
+</footer>
+<!--Footer ends-->
+
+{% endblock %}

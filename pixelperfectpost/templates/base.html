@@ -1,0 +1,79 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <script src="https://kit.fontawesome.com/3fb05debab.js" crossorigin="anonymous"></script>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+    body {
+        animation-duration: 2.5s;
+        animation-name: changeBackground;
+        animation-iteration-count: infinite;
+        animation-direction:normal;
+        animation-timing-function: ease-in-out;
+            height: auto;
+            margin: 0px;
+            padding: 0px;
+            background-attachment: fixed;
+        }
+
+        @keyframes changeBackground {
+            0% {
+background: linear-gradient(45deg, #03070c 0%,#07121d 50%,#0a2334 63%,#184267 85%, #176485 95%, #176485cc 100%); /* W3C */
+}
+10% {
+    background: linear-gradient(55deg, #03070c 0%,#07121d 50%,#0a2334 63%,#184267 85%, #176485 95%, #176485cc 100%); /* W3C */
+}
+20% {
+    background: linear-gradient(55deg, #03070c 0%,#07121d 50%,#0a2334 63%,#184267 85%, #176485 95%, #176485cc 100%); /* W3C */
+}
+30% {
+    background: linear-gradient(65deg, #03070c 0%,#07121d 50%,#0a2334 63%,#184267 85%, #176485 95%, #176485cc 100%); /* W3C */
+}
+40% {
+    background: linear-gradient(65deg, #03070c 0%,#07121d 50%,#0a2334 63%,#184267 85%, #176485 95%, #176485cc 100%); /* W3C */
+}
+50% {
+    background: linear-gradient(70deg, #03070c 0%,#07121d 50%,#0a2334 63%,#184267 85%, #176485 95%, #176485cc 100%); /* W3C */
+}
+60% {
+    background: linear-gradient(65deg, #03070c 0%,#07121d 50%,#0a2334 63%,#184267 85%, #176485 95%, #176485cc 100%); /* W3C */
+}
+70% {
+    background: linear-gradient(65deg, #03070c 0%,#07121d 50%,#0a2334 63%,#184267 85%, #176485 95%, #176485cc 100%); /* W3C */
+}
+80% {
+    background: linear-gradient(55deg, #03070c 0%,#07121d 50%,#0a2334 63%,#184267 85%, #176485 95%, #176485cc 100%); /* W3C */
+}
+90% {
+    background: linear-gradient(55deg, #03070c 0%,#07121d 50%,#0a2334 63%,#184267 85%, #176485 95%, #176485cc 100%); /* W3C */
+}
+100% {
+background: linear-gradient(45deg, #03070c 0%,#07121d 50%,#0a2334 63%,#184267 85%, #176485 95%, #176485cc 100%); /* W3C */
+}
+}
+
+
+
+
+</style>
+    {% block head %}
+
+    {% endblock %}
+
+    <title>Title</title>
+</head>
+<body>
+    <img src="{% static 'PPP Logo.png' %}"height="70px" width="50px"  style=" position: fixed; top:20px; left: 50px;">
+    <img src="{% static 'PPP vertical pixels.png' %}"  style=" position: fixed; top: 0px; left: 12%; height: 60vh; width: 50px">
+<img src="{% static 'PPP vertical line trans.png' %}" style="position: fixed; float: right; right: 15%; height:80vh; width:7px;  top: 0px; ">
+<img src="{% static 'PPP vertical pixels 1.png' %}" style=" position: fixed; float: right; right: 0px; top: 60vh; height:20vh; width:40px;">
+
+{% block body %}
+
+{% endblock %}
+</body>
+</html>
