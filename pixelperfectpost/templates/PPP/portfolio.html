@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block head %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.2/color-thief.min.js"></script>
 <style>
     main {
         display: flex;
@@ -22,7 +23,7 @@
 .portfolio-items {  
   /* This section calls the slideInFromLeft animation we defined above */
   animation: 1s ease-out 0s 1 blinkingPortfolioItems;
-  height: 25vw; 
+  height: 45vh;
   width: 20vw;
    margin-right: 15px; 
    margin-bottom: 15px;
@@ -46,51 +47,24 @@
     .main-content {
       margin-left: 25%;
        z-index: 10; 
-       margin-top: 100px;
+       margin-top: 50px;
     }
 
     main {
-      width: 70%; 
-      margin-left: 50px; 
+      width: 70%;
+        height: auto;
+
     }
 
     .portfolio-name {
       color:rgba(207, 104, 20, 0.788);
-       font-size: 2vmin; 
+       font-size: 0.8vmax;
         margin:0px;
-        padding: 5px;
+        padding: 2px;
        font-weight: bold;
     }
 
-    footer {
-        position:relative;
-         bottom: 0px;
-          color: cornsilk;
-            height: 45vh;
-             padding: 15px;
-    }
 
-    .divider {
-        position: absolute; 
-        float: right;
-          width: 1px;
-           background-color: cornsilk;
-            opacity: 0.2;
-             bottom: 10%;
-              height: 45%;
-    }
-
-    .subs-footers {
-        position: absolute;
-         width: 20%; 
-         top: 50%;
-    }
-
-    .footer-heading {
-        color: cornsilk;
-         font-size: 2.5vmin;
-          margin:0px;
-    }
 
 </style>
 {% endblock %}
@@ -100,10 +74,10 @@
 <!--Navigational links-->
 <nav style="position:fixed; top: 20px; right: 1%;">
    
-    <i class="fas fa-angle-right" style="color: rgba(245, 245, 245, 0.452)"></i> <a class="top-menus"  href="{% url 'services' %} ">Explore services</a><br>
-    <i class="fas fa-angle-right" style="color: rgba(245, 245, 245, 0.452)"></i> <a  class="top-menus"   href="{% url 'works' %} ">Checkout reels</a><br>
-    <i class="fas fa-angle-right" style="color: rgba(245, 245, 245, 0.452)"></i> <a  class="top-menus"   href="{% url 'contact'  %}" >Let's connect!</a><br>
-     <i class="fas fa-angle-right" style="color: rgba(245, 245, 245, 0.452);"></i> <a class="top-menus"  href="{% url 'about' %}" >Our story..</a><br>
+    <i class="fas fa-angle-right" style="color: rgba(245, 245, 245, 0.452)"></i> <a class="top-menus"  href="{% url 'services' %} ">Services</a><br>
+    <i class="fas fa-angle-right" style="color: rgba(245, 245, 245, 0.452)"></i> <a  class="top-menus"   href="{% url 'works' %} ">Reels</a><br>
+    <i class="fas fa-angle-right" style="color: rgba(245, 245, 245, 0.452)"></i> <a  class="top-menus"   href="{% url 'contact'  %}" >Contact</a><br>
+     <i class="fas fa-angle-right" style="color: rgba(245, 245, 245, 0.452);"></i> <a class="top-menus"  href="{% url 'about' %}" >About US</a><br>
 </nav>  <!--Navigational links endblock-->
 
 
@@ -111,11 +85,11 @@
 
 <!--Main content- Portfolio items display begin-->
 <div class="main-content">
-    <h2 style="color:rgba(207, 104, 20, 0.438) ; width: 70%;"><b>OUR CLIENTS, OUR WORK...</b></h3>
+    <h2 style="color:rgba(207, 104, 20, 0.438) ;font-size: 3.8vmin; width: 70%;"><b>OUR CLIENTS, OUR WORK...</b></h2>
         <main>
     {% for portfolio in portfolios %}
       <div class="portfolio-items">
-          <img src="{{portfolio.image.url}}" alt="{{portfolio.name}}" width="100%" height="90%">
+          <img class="portfolio-images" onclick="colorImages(this)" src="{{portfolio.image.url}}" alt="{{portfolio.name}}" width="100%" height="90%">
           <p class="portfolio-name">{{portfolio.name}}</p>
       </div>
     {% endfor %}
@@ -124,57 +98,27 @@
 <!--Main content- Portfolio items display end-->
 
 
-
-<!--Footer begins-->
-<footer>
-    <div class="subs-footers" style="left: 10%;">
-    <h3 class="footer-heading">CONTACT</h3>
-    <address style="color: cornsilk; font-size: 2vmin; margin-top: 10px"> <!--Company address-->
- Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
-         Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
-         Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
-    </address>
-        </div>
+<script>
 
 
 
-    <div class="divider" style="left: 33%;"> <!--Divider of footer-->
-    </div>
+
+
+function colorImages (image) {
+
+    const colorThief = new ColorThief();
+    img = colorThief.getColor(image);
+console.log(colorThief.getColor(image));
+
+document.body.style.animationName = "xyz";
+document.body.style.background = "linear-gradient(45deg, black 0%, rgb(" + img[0] + "," + img[1] + "," + img[2] + ") 50%, black 100%)";
+console.log(img[0], img[1], img[2]);
+}
 
 
 
-     <div class="subs-footers" style="left: 40%;">  <!--Social Media links-->
-    <h3 class="footer-heading">SOCIALS</h3>
-     <div style="color: cornsilk; font-size: 1.8vmin; margin-top: 10px">
-        <span><img src="{% static 'PPP instagram.png' %}" alt="Instagram icon" height="20px" width="20px" style="margin-right: 5px"> </span> <!--Instagram link-->
-        <span><img src="{% static 'PPP twitter.png' %}" alt="Twitter icon" height="20px" width="20px" style="margin-right: 5px"> </span> <!--Twitter link-->
-        <span><img src="{% static 'PPP vimeo.png' %}" alt="Vimeo icon" height="20px" width="20px" style="margin-right: 5px"> </span> <!--Vimeo link-->
-         <span><img src="{% static 'PPP whatsapp.png' %}" alt="Whatsapp icon" height="20px" width="20px" style="margin-right: 5px"> </span> <!--Whatsapp link-->
-    </div>
-        </div>
+</script>
 
-
-
-    <div class="divider" style=" left: 64%;"> <!--Divider of footer-->
-    </div>
-
-
-
-     <div  class="subs-footers" style="left: 71%; width:10%">  <!--MassiveVFX Social Media links-->
-    <h3 class="footer-heading">PARENT COMPANY </h3>
-    <div style="color: cornsilk; font-size: 2vmin; margin-top: 10px">
-        <p><i class="fas fa-angle-right" style="color: whitesmoke"></i>
-            <a href="https://www.massivevfxstudios.com/" target="_blank" style="text-decoration: none">Massive VFX Studios</a></p> <!--MassiveVFX Website link-->
-         <div style="color: cornsilk; font-size: 1.8vmin; margin-top: 10px">
-        <span><img src="{% static 'PPP instagram.png' %}" alt="Instagram icon" height="20px" width="20px" style="margin-right: 5px"> </span> <!--MassiveVFX Instagram link-->
-        <span><img src="{% static 'PPP twitter.png' %}" alt="Twitter icon" height="20px" width="20px" style="margin-right: 5px"> </span>  <!--MassiveVFX Twitter link-->
-        <span><img src="{% static 'PPP vimeo.png' %}" alt="Vimeo icon" height="20px" width="20px" style="margin-right: 5px"> </span>  <!--MassiveVFX Vimeo link-->
-         <span><img src="{% static 'PPP whatsapp.png' %}" alt="Whatsapp icon" height="20px" width="20px" style="margin-right: 5px"> </span> <!--MassiveVFX Whatsapp link-->
-    </div>
-    </div>
-        </div>
-</footer>
-<!--Footer ends-->
 
 
 {% endblock %}

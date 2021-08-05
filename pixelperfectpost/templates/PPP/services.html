@@ -1,7 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block head %}
+
 <style>
+
 * {
   box-sizing: border-box;
 }
@@ -22,10 +24,8 @@
     opacity: 0.7;
 }
 
-.main {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 4px;
+main {
+
 }
 
 .flip-card::after {
@@ -79,15 +79,18 @@
     }
 
     .main-div {
-       margin-left: 25%;
+       margin-left: 30%;
         z-index: 10; 
         margin-top: 50px;
     }
 
     main {
-      height: 80vw; 
+      height: auto;
       width: 80%; 
       padding:50px;
+        display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
     }
 
     .service-name {
@@ -99,35 +102,6 @@
       right: 5px;
     }
         
-    footer {
-        position:relative;
-         bottom: 0px;
-          color: cornsilk;
-            height: 45vh;
-             padding: 15px;
-    }
-
-    .divider {
-        position: absolute; 
-        float: right;
-          width: 1px;
-           background-color: cornsilk;
-            opacity: 0.2;
-             bottom: 10%;
-              height: 45%;
-    }
-
-    .subs-footers {
-        position: absolute;
-         width: 20%; 
-         top: 50%;
-    }
-
-    .footer-heading {
-        color: cornsilk;
-         font-size: 2.5vmin;
-          margin:0px;
-    }
 
 
 
@@ -139,17 +113,17 @@
 <!--Navigational links-->
 <nav style="position:fixed; top: 20px; right: 1%;">
    
-    <i class="fas fa-angle-right" style="color: rgba(245, 245, 245, 0.452)"></i> <a class="top-menus"  href="{% url 'portfolio' %} ">Explore portfolio</a><br>
-    <i class="fas fa-angle-right" style="color: rgba(245, 245, 245, 0.452)"></i> <a  class="top-menus"   href="{% url 'works' %} ">Checkout reels</a><br>
-    <i class="fas fa-angle-right" style="color: rgba(245, 245, 245, 0.452)"></i> <a  class="top-menus"   href="{% url 'contact'  %}" >Let's connect!</a><br>
-     <i class="fas fa-angle-right" style="color: rgba(245, 245, 245, 0.452);"></i> <a class="top-menus"  href="{% url 'about' %}" >Our story..</a><br>
+    <i class="fas fa-angle-right" style="color: rgba(245, 245, 245, 0.452)"></i> <a class="top-menus"  href="{% url 'portfolio' %} ">Portfolio</a><br>
+    <i class="fas fa-angle-right" style="color: rgba(245, 245, 245, 0.452)"></i> <a  class="top-menus"   href="{% url 'works' %} ">Reels</a><br>
+    <i class="fas fa-angle-right" style="color: rgba(245, 245, 245, 0.452)"></i> <a  class="top-menus"   href="{% url 'contact'  %}" >Contact</a><br>
+     <i class="fas fa-angle-right" style="color: rgba(245, 245, 245, 0.452);"></i> <a class="top-menus"  href="{% url 'about' %}" >About Us</a><br>
 </nav>
 
 
 <!--Main Content begins-->
 <div class="main-div">
    
-    <h2 style="color:rgba(207, 104, 20, 0.438) ;"><b>CHECK OUT OUR EXPERTS DOING WHAT THEY DO THE BEST!</b></h3>
+    <h2 style="color:rgba(207, 104, 20, 0.438) ; font-size: 3.8vmin; width: 78%;"><b>CHECK OUT OUR EXPERTS DOING WHAT THEY DO THE BEST!</b></h3>
 
     <main>
         {% for service in services %}
@@ -180,9 +154,9 @@
                   {% endif %}
                 
               </div>
-              <div  style="padding:10px;" class="flip-card-back">
+              <div  style="padding:8%;" class="flip-card-back">
                 
-                <p style="font-size: 1rem;"><i>{{service.description}}</i></p> <!--Service description at back of the card-->
+                <p style="font-size: 1.1vmax;"><i>{{service.description}}</i></p> <!--Service description at back of the card-->
                 
               </div>
             </div>
@@ -191,59 +165,10 @@
           {% endfor %}
              
         </main>
-       
-</div> <!--Main Content begins-->
 
-<!--Footer begins-->
-<footer>
-    <div class="subs-footers" style="left: 10%;">
-    <h3 class="footer-heading">CONTACT</h3>
-    <address style="color: cornsilk; font-size: 2vmin; margin-top: 10px"> <!--Company address-->
- Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
-         Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
-         Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
-    </address>
-        </div>
+    </h2>
+</div><!--Main Content ends-->
 
-
-
-    <div class="divider" style="left: 33%;"> <!--Divider of footer-->
-    </div>
-
-
-
-     <div class="subs-footers" style="left: 40%;">  <!--Social Media links-->
-    <h3 class="footer-heading">SOCIALS</h3>
-     <div style="color: cornsilk; font-size: 1.8vmin; margin-top: 10px">
-        <span><img src="{% static 'PPP instagram.png' %}" alt="Instagram icon" height="20px" width="20px" style="margin-right: 5px"> </span> <!--Instagram link-->
-        <span><img src="{% static 'PPP twitter.png' %}" alt="Twitter icon" height="20px" width="20px" style="margin-right: 5px"> </span> <!--Twitter link-->
-        <span><img src="{% static 'PPP vimeo.png' %}" alt="Vimeo icon" height="20px" width="20px" style="margin-right: 5px"> </span> <!--Vimeo link-->
-         <span><img src="{% static 'PPP whatsapp.png' %}" alt="Whatsapp icon" height="20px" width="20px" style="margin-right: 5px"> </span> <!--Whatsapp link-->
-    </div>
-        </div>
-
-
-
-    <div class="divider" style=" left: 64%;"> <!--Divider of footer-->
-    </div>
-
-
-
-     <div  class="subs-footers" style="left: 71%; width:10%">  <!--MassiveVFX Social Media links-->
-    <h3 class="footer-heading">PARENT COMPANY </h3>
-    <div style="color: cornsilk; font-size: 2vmin; margin-top: 10px">
-        <p><i class="fas fa-angle-right" style="color: whitesmoke"></i>
-            <a href="https://www.massivevfxstudios.com/" target="_blank" style="text-decoration: none">Massive VFX Studios</a></p> <!--MassiveVFX Website link-->
-         <div style="color: cornsilk; font-size: 1.8vmin; margin-top: 10px">
-        <span><img src="{% static 'PPP instagram.png' %}" alt="Instagram icon" height="20px" width="20px" style="margin-right: 5px"> </span> <!--MassiveVFX Instagram link-->
-        <span><img src="{% static 'PPP twitter.png' %}" alt="Twitter icon" height="20px" width="20px" style="margin-right: 5px"> </span>  <!--MassiveVFX Twitter link-->
-        <span><img src="{% static 'PPP vimeo.png' %}" alt="Vimeo icon" height="20px" width="20px" style="margin-right: 5px"> </span>  <!--MassiveVFX Vimeo link-->
-         <span><img src="{% static 'PPP whatsapp.png' %}" alt="Whatsapp icon" height="20px" width="20px" style="margin-right: 5px"> </span> <!--MassiveVFX Whatsapp link-->
-    </div>
-    </div>
-        </div>
-</footer>
-<!--Footer ends-->
 
 
 <!--Script to initiate flip action of card onclick for mobile devices-->
@@ -251,7 +176,10 @@
     $('.flip-card .flip-card-inner').click(function() {
 	$(this).closest('.flip-card').toggleClass('hover');
     $(this).css('transform, rotateY(180deg)');
+    $(this).css('transform, scale(2,2)' );
 });
 </script>
+
+
 
 {% endblock %}

@@ -52,7 +52,12 @@ def portflio(request):
 
     portfolios = Portfolio.objects.all
 
-    return render(request,'PPP/portfolio.html',{'portfolios':portfolios})  
+    return render(request,'PPP/portfolio.html',{'portfolios':portfolios})
+
+
+def ripples(request):
+
+    return render(request,'PPP/ripples.html')
 
 
 

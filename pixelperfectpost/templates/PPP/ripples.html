@@ -1,0 +1,99 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+   <!-- <script src="http://www.jqueryscript.net/demo/jQuery-Plugin-For-Water-Ripple-Animation-ripples/js/jquery.ripples.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.2/color-thief.min.js"></script>
+   <style>
+        * {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+section {
+    width: 100vw;
+    height: 100vh;
+    float: left;
+
+}
+
+@keyframes changeBackground {
+            0% {
+background: linear-gradient(45deg, #03070c 0%,#07121d 50%,#0a2334 63%,#184267 85%, #176485 95%, #176485cc 100%); /* W3C */
+}
+10% {
+    background: linear-gradient(55deg, #03070c 0%,#07121d 50%,#0a2334 63%,#184267 85%, #176485 95%, #176485cc 100%); /* W3C */
+}
+20% {
+    background: linear-gradient(55deg, #03070c 0%,#07121d 50%,#0a2334 63%,#184267 85%, #176485 95%, #176485cc 100%); /* W3C */
+}
+30% {
+    background: linear-gradient(65deg, #03070c 0%,#07121d 50%,#0a2334 63%,#184267 85%, #176485 95%, #176485cc 100%); /* W3C */
+}
+40% {
+    background: linear-gradient(65deg, #03070c 0%,#07121d 50%,#0a2334 63%,#184267 85%, #176485 95%, #176485cc 100%); /* W3C */
+}
+50% {
+    background: linear-gradient(70deg, #03070c 0%,#07121d 50%,#0a2334 63%,#184267 85%, #176485 95%, #176485cc 100%); /* W3C */
+}
+60% {
+    background: linear-gradient(65deg, #03070c 0%,#07121d 50%,#0a2334 63%,#184267 85%, #176485 95%, #176485cc 100%); /* W3C */
+}
+70% {
+    background: linear-gradient(65deg, #03070c 0%,#07121d 50%,#0a2334 63%,#184267 85%, #176485 95%, #176485cc 100%); /* W3C */
+}
+80% {
+    background: linear-gradient(55deg, #03070c 0%,#07121d 50%,#0a2334 63%,#184267 85%, #176485 95%, #176485cc 100%); /* W3C */
+}
+90% {
+    background: linear-gradient(55deg, #03070c 0%,#07121d 50%,#0a2334 63%,#184267 85%, #176485 95%, #176485cc 100%); /* W3C */
+}
+100% {
+background: linear-gradient(45deg, #03070c 0%,#07121d 50%,#0a2334 63%,#184267 85%, #176485 95%, #176485cc 100%); /* W3C */
+}
+}
+
+
+        section.hover {
+   animation-duration: 2.5s;
+        animation-name: changeBackground;
+        animation-iteration-count: infinite;
+        animation-direction:normal;
+        animation-timing-function: ease-in-out;
+
+  }
+    </style>
+</head>
+<body>
+<section class="hover">Hi</section>
+<script>
+    try {
+  $(".hover").ripples({
+    resolution: 1080,
+    perturbance: 0.01,
+    interactive: true
+  });
+} catch (e) {
+  $(".error")
+    .show()
+    .text(e);
+}
+setInterval(function() {
+  var x = Math.random() * $el.outerWidth();
+  var y = Math.random() * $el.outerHeight();
+  var dropRadius = 50;
+  var strength = 0.5 + Math.random() * 0.04;
+  $el.ripples("drop", x, y, dropRadius, strength);
+}, 12000);
+</script>
+
+</body>
+</html>
