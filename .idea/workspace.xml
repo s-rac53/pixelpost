@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="407b8d76-6e10-4aba-b6b8-fa32c03eec07" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/pixelperfectpost/templates/PPP/portfolio.html" beforeDir="false" afterPath="$PROJECT_DIR$/pixelperfectpost/templates/PPP/portfolio.html" afterDir="false" />
-    </list>
+    <list default="true" id="407b8d76-6e10-4aba-b6b8-fa32c03eec07" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,24 +64,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="services.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="services.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pixelperfectpost/templates/PPP/services.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2370">
-              <caret line="158" column="40" selection-start-line="158" selection-start-column="40" selection-end-line="158" selection-end-column="40" />
+            <state relative-caret-position="-945">
+              <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
               <folding>
                 <element signature="e#3031#3104#0#HTML" expanded="true" />
                 <element signature="e#4233#4254#0#HTML" expanded="true" />
+                <element signature="e#4315#4342#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="portfolio.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="portfolio.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pixelperfectpost/templates/PPP/portfolio.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+            <state relative-caret-position="1155">
+              <caret line="92" column="68" selection-start-line="92" selection-start-column="68" selection-end-line="92" selection-end-column="68" />
               <folding>
                 <element signature="e#2555#2608#0#HTML" expanded="true" />
               </folding>
@@ -138,8 +137,8 @@
         <option value="$PROJECT_DIR$/pixelperfectpost/templates/base.html" />
         <option value="$PROJECT_DIR$/pixelperfectpost/templates/PPP/ripples.html" />
         <option value="$PROJECT_DIR$/pixelpost/settings.py" />
-        <option value="$PROJECT_DIR$/pixelperfectpost/templates/PPP/services.html" />
         <option value="$PROJECT_DIR$/pixelperfectpost/templates/PPP/portfolio.html" />
+        <option value="$PROJECT_DIR$/pixelperfectpost/templates/PPP/services.html" />
       </list>
     </option>
   </component>
@@ -558,23 +557,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pixelperfectpost/templates/PPP/services.html">
+    <entry file="file://$PROJECT_DIR$/pixelperfectpost/templates/PPP/portfolio.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2370">
-          <caret line="158" column="40" selection-start-line="158" selection-start-column="40" selection-end-line="158" selection-end-column="40" />
+        <state relative-caret-position="1155">
+          <caret line="92" column="68" selection-start-line="92" selection-start-column="68" selection-end-line="92" selection-end-column="68" />
           <folding>
-            <element signature="e#3031#3104#0#HTML" expanded="true" />
-            <element signature="e#4233#4254#0#HTML" expanded="true" />
+            <element signature="e#2555#2608#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pixelperfectpost/templates/PPP/portfolio.html">
+    <entry file="file://$PROJECT_DIR$/pixelperfectpost/templates/PPP/services.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+        <state relative-caret-position="-945">
+          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
           <folding>
-            <element signature="e#2555#2608#0#HTML" expanded="true" />
+            <element signature="e#3031#3104#0#HTML" expanded="true" />
+            <element signature="e#4233#4254#0#HTML" expanded="true" />
+            <element signature="e#4315#4342#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
