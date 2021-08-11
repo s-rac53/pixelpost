@@ -24,11 +24,13 @@
         .form-input {
             background-color: transparent;
             padding: 5px;
-            width: 225px;
+
             border: 1px rgba(204,211,203,0.19) solid;
             color: whitesmoke;
             margin-bottom: 10px;
-            margin-left: 30%;
+            margin-left: 15vmax;
+            width: 35%;
+            min-width: 120px;
             
 
         }
@@ -38,9 +40,11 @@
             color: #ffac52;
             opacity: 0.5; /* Firefox */
             font-style: italic;
-            padding: 5px;
-            width: 100px;
-            margin-left: 30%;
+            padding: 4px;
+            width: 14%;
+            margin-left: 15vmax;
+            min-width: 50px;
+            display: inline;
         }
 
         select:focus {
@@ -60,9 +64,10 @@
             border: 1px rgba(204,211,203,0.19) solid;
             color: whitesmoke;
             margin-bottom: 10px;
-            margin-left: 30%;
             font-style: italic;
-             width: 237px;
+             width: 35%;
+            margin-left: 15vmax;
+            min-width: 120px;
 
          }
 
@@ -96,18 +101,18 @@
 .top-menus {
         text-decoration: none;
         color:whitesmoke;
-        font-size: 1.8vmin;
+        font-size: 1.6vmin;
         
     }
 
     .main-div {
-        margin-left: 25%; 
+        margin-left: 25%;
         z-index: 10; 
         margin-top: 100px;  
     }
 
     .main-heading {
-        font-size: 1.5em; 
+        font-size: 3.8vmin;
         text-align: center;
         width:70%;
           margin-top: 8vh; 
@@ -115,10 +120,12 @@
     }
 
     .custform {
-        padding: 50px;
+        padding-top: 5%;
          margin-top: 65px; 
          width:65%; 
-         position: relative; 
+         position: relative;
+        margin-right: 0px;
+
 
 
     }
@@ -130,6 +137,29 @@
           text-align: center;
     }
 
+    #number {
+        margin-left: 0px;
+        width: 20.5%;
+        min-width: 70px;
+    }
+
+    @media only screen and (max-width: 360px) {
+  select {
+    min-width: 120px;
+  }
+
+
+}
+
+@media only screen and (max-width: 360px) {
+ #number {
+            min-width: 120px;
+            margin-left: 15vmax;
+            margin-top: 10px;
+        }
+}
+
+
 
 </style>
 {% endblock %}
@@ -138,7 +168,7 @@
 {% block body %}
 
 <!--Navigational links-->
-<nav style="position:fixed; top: 20px; right: 3%;">
+<nav style="position:fixed; top: 20px; right: 1%;">
     <i class="fas fa-angle-right" style="color: rgba(245, 245, 245, 0.452)"></i> <a  class="top-menus"   href="{% url 'about' %} ">ABOUT US</a><br>
     <i class="fas fa-angle-right" style="color: rgba(245, 245, 245, 0.452);"></i> <a class="top-menus"  href="{% url 'services' %}" >SERVICES</a><br>
     <i class="fas fa-angle-right" style="color: rgba(245, 245, 245, 0.452)"></i> <a class="top-menus"  href="{% url 'portfolio' %} ">PORTFOLIO</a><br>
@@ -384,12 +414,12 @@
            <option data-countryCode="ZW" value="263">Zimbabwe (+263)</option>
        </optgroup>
    </select>
-            <input required style="width: 121px; margin-left: 0px;" id="number" name="number" class="form-input" type="tel" pattern="[0-9]{10}" placeholder="Phone..." > <br>
-            <input required class="form-input" type="email" id="email" name="email" placeholder="Email..."> <br>
-            <textarea required class="form-input" id="description" name="description" rows="8" cols="10" style="font-size: 2vmin;" placeholder="Your ideas..."></textarea><br>
-            <input  class="form-input" id="location" name="location" type="text" placeholder="City..."><br>
+            <input required id="number" name="number" class="form-input" type="tel" pattern="[0-9]{10}" placeholder="Phone..." > <br>
+            <input required class="form-input"  type="email" id="email" name="email" placeholder="Email..."> <br>
+            <textarea required class="form-input" id="description" name="description" rows="8" cols="10" style="font-size: 12px;" placeholder="Your ideas..."></textarea><br>
+            <input class="form-input" id="location" name="location" type="text" placeholder="City..."><br>
             <input required class="form-input" id="company" name="company" type="text" placeholder="Company..."> <br>
-            <input class="input-submit" style="font-style: italic; width: 237px;" type="submit"> <br>
+            <input style="font-style: italic;" class="input-submit" type="submit"> <br>
    
    
             <p id="message"> </p>
