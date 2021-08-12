@@ -68,59 +68,50 @@ background: linear-gradient(45deg, #03070c 0%,#07121d 50%,#0a2334 63%,#184267 85
 }
 
 
-            html, body { height:100%; }
+            html { height:100%; }
 body {
-    -webkit-text-size-adjust: none;
+    max-height: 100vh;
     max-width: 100vh;
+    -webkit-text-size-adjust: none;
+
     margin: 0 auto;
     padding: 10px;
     font-family:sans-serif;
     font-size:4vmin;
+     overflow: hidden;
 }
 
 #main {
-    height:70vh;
+    height:100vh;
+    max-height: 100vh;
+    max-width: 100vh;
     margin:0;
     padding:0;
     position: relative;
+
 }
 .layer {
-    box-sizing:border-box;
-    position:fixed;
-    top:0;
-    left:0;
-    display:table;
-    table-layout:fixed;
-    width:100%;
-    height:100%;
+   overflow: hidden;
 
 }
 .layer-cell {
-    display:table-cell;
-    vertical-align:middle;
 
-}
-#main input[type=checkbox], #main input[type=radio] {
-    display:none;
-}
+ overflow: hidden;
 
-#options button {
-    margin:0.5vmin;
-}
-#options label {
-    font-size:6vmin;
 }
 
 /* cube */
 .container {
+    position: absolute;
+    top: 35vh;
+    left: 12vw;
     width: 50vmin;
     height: 50vmin;
-    position: relative;
-    margin: 0 auto 10vmin;
     border: 0.25vmin solid #CCC;
     border:0 none transparent;
     -webkit-perspective: 250vmin;
             perspective: 250vmin;
+
 }
 #cube {
     width: 100%;
@@ -138,7 +129,7 @@ body {
     position: absolute;
     width: 49vmin;
     height: 49vmin;
-    line-height: 40vmin;
+    line-height: 49vmin;
     font-size: 30vmin;
     font-weight: bold;
     color: white;
@@ -339,7 +330,7 @@ body {
           position: absolute;
           top: 32%;
           text-align: center;
-          animation-name: pixelpostText ;
+         animation-name: pixelpostText ;
                 animation-delay: 3.9s;
                 animation-direction: normal;
                 animation-iteration-count: 1;
@@ -368,7 +359,7 @@ body {
                 left: 50%;
 
                 opacity: 0;
-                 animation-name: staticglitch ;
+                animation-name: staticglitch ;
                 animation-delay: 6.5s;
                 animation-direction: normal;
                 animation-iteration-count: 1;
@@ -400,15 +391,6 @@ body {
 
 
 <section id="main">
-
-  <input type="checkbox" id="cmd0" name="cmd0">
-
-  <input type="radio" id="cmd1" name="cmd" checked>
-  <input type="radio" id="cmd2" name="cmd">
-  <input type="radio" id="cmd3" name="cmd">
-  <input type="radio" id="cmd4" name="cmd">
-  <input type="radio" id="cmd5" name="cmd">
-  <input type="radio" id="cmd6" name="cmd">
 
   <div class="layer"><div class="layer-cell">
       <section class="container">
