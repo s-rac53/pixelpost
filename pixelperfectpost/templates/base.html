@@ -94,7 +94,29 @@ footer {
           margin:0px;
     }
 
+    .iconsPPP {
+        margin-right: 5px;
+        min-height: 13px;
+        min-width: 13px;
+        height: 8%;
+        width: 8%;
 
+    }
+
+    .iconsMVS {
+         margin-right: 5px;
+        min-height: 13px;
+        min-width: 13px;
+        height: 16%;
+        width: 16%;
+    }
+
+  @media screen and (max-width: 325px) {
+     .iconsPPP, .iconsMVS  {
+         min-width: 9px;
+         min-height: 9px;
+     }
+}
 
 </style>
     {% block head %}
@@ -133,10 +155,10 @@ footer {
      <div class="subs-footers" style="left: 40%;">  <!--Social Media links-->
     <h3 class="footer-heading">SOCIALS</h3>
      <div style="color: cornsilk; font-size: 1.8vmin; margin-top: 10px">
-        <span><img src="{% static 'PPP instagram.png' %}" alt="Instagram icon" height="8%" width="8%" style="margin-right: 5px; min-height: 13px; min-width: 13px"> </span> <!--Instagram link-->
-        <span><img src="{% static 'PPP twitter.png' %}" alt="Twitter icon" height="8%" width="8%" style="margin-right: 5px;  min-height: 13px; min-width: 13px"> </span> <!--Twitter link-->
-        <span><img src="{% static 'PPP vimeo.png' %}" alt="Vimeo icon" height="8%" width="8%" style="margin-right: 5px;  min-height: 13px; min-width: 13px"> </span> <!--Vimeo link-->
-         <span><img src="{% static 'PPP whatsapp.png' %}" alt="Whatsapp icon" height="8%" width="8%" style="margin-right: 5px;  min-height: 13px; min-width: 13px"> </span> <!--Whatsapp link-->
+        <span><img class="iconsPPP" src="{% static 'PPP instagram.png' %}" alt="Instagram icon" > </span> <!--Instagram link-->
+        <span><img class="iconsPPP" src="{% static 'PPP twitter.png' %}" alt="Twitter icon" > </span> <!--Twitter link-->
+        <span><img class="iconsPPP" src="{% static 'PPP vimeo.png' %}" alt="Vimeo icon" > </span> <!--Vimeo link-->
+         <span><img class="iconsPPP" src="{% static 'PPP whatsapp.png' %}" alt="Whatsapp icon" > </span> <!--Whatsapp link-->
     </div>
         </div>
 
@@ -153,10 +175,10 @@ footer {
         <p><i class="fas fa-angle-right" style="color: whitesmoke"></i>
             <a href="https://www.massivevfxstudios.com/" target="_blank" style="text-decoration: none">Massive VFX Studios</a></p> <!--MassiveVFX Website link-->
          <div style="color: cornsilk; font-size: 1.8vmin; margin-top: 10px">
-        <span><img src="{% static 'PPP instagram.png' %}" alt="Instagram icon" height="16%" width="16%" style="margin-right: 5px;  min-height: 13px; min-width: 13px"> </span> <!--MassiveVFX Instagram link-->
-        <span><img src="{% static 'PPP twitter.png' %}" alt="Twitter icon" height="16%" width="16%" style="margin-right: 5px;  min-height: 13px; min-width: 13px"> </span>  <!--MassiveVFX Twitter link-->
-        <span><img src="{% static 'PPP vimeo.png' %}" alt="Vimeo icon" height="16%" width="16%" style="margin-right: 5px;  min-height: 13px; min-width: 13px"> </span>  <!--MassiveVFX Vimeo link-->
-         <span><img src="{% static 'PPP whatsapp.png' %}" alt="Whatsapp icon" height="16%" width="16%" style="margin-right: 5px; min-height: 13px; min-width: 13px "> </span> <!--MassiveVFX Whatsapp link-->
+        <span><img class="iconsMVS" src="{% static 'PPP instagram.png' %}" alt="Instagram icon" > </span> <!--MassiveVFX Instagram link-->
+        <span><img class="iconsMVS" src="{% static 'PPP twitter.png' %}" alt="Twitter icon" > </span>  <!--MassiveVFX Twitter link-->
+        <span><img class="iconsMVS" src="{% static 'PPP vimeo.png' %}" alt="Vimeo icon" > </span>  <!--MassiveVFX Vimeo link-->
+         <span><img class="iconsMVS" src="{% static 'PPP whatsapp.png' %}" alt="Whatsapp icon" > </span> <!--MassiveVFX Whatsapp link-->
     </div>
     </div>
         </div>
