@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="407b8d76-6e10-4aba-b6b8-fa32c03eec07" name="Default" comment="" />
+    <list default="true" id="407b8d76-6e10-4aba-b6b8-fa32c03eec07" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pixelperfectpost/templates/PPP/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/pixelperfectpost/templates/PPP/contact.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,8 +38,8 @@
       <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pixelperfectpost/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="69" selection-start-line="10" selection-start-column="69" selection-end-line="10" selection-end-column="69" />
+            <state relative-caret-position="1388">
+              <caret line="135" column="109" selection-start-line="135" selection-start-column="109" selection-end-line="135" selection-end-column="109" />
             </state>
           </provider>
         </entry>
@@ -62,16 +65,8 @@
       <file leaf-file-name="services.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pixelperfectpost/templates/PPP/services.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="119" column="42" lean-forward="true" selection-start-line="119" selection-start-column="42" selection-end-line="119" selection-end-column="42" />
-              <folding>
-                <element signature="e#1747#1792#0#HTML" expanded="true" />
-                <element signature="e#1832#1873#0#HTML" expanded="true" />
-                <element signature="e#1983#2024#0#HTML" expanded="true" />
-                <element signature="e#2128#2169#0#HTML" expanded="true" />
-                <element signature="e#2279#2321#0#HTML" expanded="true" />
-                <element signature="e#2463#2536#0#HTML" expanded="true" />
-              </folding>
+            <state relative-caret-position="1785">
+              <caret line="119" column="42" selection-start-line="119" selection-start-column="42" selection-end-line="119" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -79,18 +74,8 @@
       <file leaf-file-name="contact.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pixelperfectpost/templates/PPP/contact.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="153" column="11" selection-start-line="153" selection-start-column="7" selection-end-line="153" selection-end-column="11" />
-              <folding>
-                <element signature="e#2687#2732#0#HTML" expanded="true" />
-                <element signature="e#2768#2809#0#HTML" expanded="true" />
-                <element signature="e#2916#2958#0#HTML" expanded="true" />
-                <element signature="e#3066#3107#0#HTML" expanded="true" />
-                <element signature="e#3217#3258#0#HTML" expanded="true" />
-                <element signature="e#3619#3683#0#HTML" expanded="true" />
-                <element signature="e#21568#21593#0#HTML" expanded="true" />
-                <element signature="e#22236#22314#0#HTML" expanded="true" />
-              </folding>
+            <state relative-caret-position="29">
+              <caret line="154" column="10" lean-forward="true" selection-start-line="154" selection-start-column="10" selection-end-line="154" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -124,8 +109,8 @@
         <option value="$PROJECT_DIR$/pixelperfectpost/templates/PPP/works.html" />
         <option value="$PROJECT_DIR$/pixelperfectpost/templates/PPP/services.html" />
         <option value="$PROJECT_DIR$/pixelperfectpost/templates/PPP/portfolio.html" />
-        <option value="$PROJECT_DIR$/pixelperfectpost/templates/PPP/contact.html" />
         <option value="$PROJECT_DIR$/pixelperfectpost/templates/base.html" />
+        <option value="$PROJECT_DIR$/pixelperfectpost/templates/PPP/contact.html" />
       </list>
     </option>
   </component>
@@ -150,7 +135,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -202,6 +186,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -272,7 +257,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -513,6 +497,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pixelperfectpost/templates/PPP/services.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1785">
+          <caret line="119" column="42" selection-start-line="119" selection-start-column="42" selection-end-line="119" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pixelperfectpost/templates/PPP/aboutus.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="825">
@@ -520,42 +511,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pixelperfectpost/templates/PPP/services.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="119" column="42" lean-forward="true" selection-start-line="119" selection-start-column="42" selection-end-line="119" selection-end-column="42" />
-          <folding>
-            <element signature="e#1747#1792#0#HTML" expanded="true" />
-            <element signature="e#1832#1873#0#HTML" expanded="true" />
-            <element signature="e#1983#2024#0#HTML" expanded="true" />
-            <element signature="e#2128#2169#0#HTML" expanded="true" />
-            <element signature="e#2279#2321#0#HTML" expanded="true" />
-            <element signature="e#2463#2536#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pixelperfectpost/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="69" selection-start-line="10" selection-start-column="69" selection-end-line="10" selection-end-column="69" />
+        <state relative-caret-position="1388">
+          <caret line="135" column="109" selection-start-line="135" selection-start-column="109" selection-end-line="135" selection-end-column="109" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pixelperfectpost/templates/PPP/contact.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="153" column="11" selection-start-line="153" selection-start-column="7" selection-end-line="153" selection-end-column="11" />
-          <folding>
-            <element signature="e#2687#2732#0#HTML" expanded="true" />
-            <element signature="e#2768#2809#0#HTML" expanded="true" />
-            <element signature="e#2916#2958#0#HTML" expanded="true" />
-            <element signature="e#3066#3107#0#HTML" expanded="true" />
-            <element signature="e#3217#3258#0#HTML" expanded="true" />
-            <element signature="e#3619#3683#0#HTML" expanded="true" />
-            <element signature="e#21568#21593#0#HTML" expanded="true" />
-            <element signature="e#22236#22314#0#HTML" expanded="true" />
-          </folding>
+        <state relative-caret-position="29">
+          <caret line="154" column="10" lean-forward="true" selection-start-line="154" selection-start-column="10" selection-end-line="154" selection-end-column="10" />
         </state>
       </provider>
     </entry>
