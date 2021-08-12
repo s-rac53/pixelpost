@@ -1,8 +1,10 @@
+{% load static %}
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+
 <html>
     <head>
         <meta charset="utf-8">
@@ -18,7 +20,8 @@
 box-sizing: border-box;
 }
 
-main {
+body {
+
 animation-duration: 2.5s;
 animation-name: changeBackground;
 animation-iteration-count: infinite;
@@ -26,6 +29,7 @@ animation-direction:normal;
 animation-timing-function: ease-in-out;
 
 }
+
 
 @keyframes changeBackground {
 0% {
@@ -64,140 +68,379 @@ background: linear-gradient(45deg, #03070c 0%,#07121d 50%,#0a2334 63%,#184267 85
 }
 
 
-#cool-hover{
-width: 90%;
-height: 30%;
-display: block;
-border-radius: 10px;
-box-shadow: 0 0 15px rgba(0,0,0,0.3);
-transition: all 0.5s;
-position: relative;
-overflow: hidden;
-margin-left:5%;
-margin-top:15px;
-
-}
-#cool-hover:before{
-border-radius: inherit;
-display: block;
-width: 1000%;
-height: 1000%;
-content: '';
-position: absolute;
-top: 0; 
-left: 0;
-background: linear-gradient(145deg, black 20%, cornsilk 80%); 
-opacity: 0.5;
-transition: all 0.5s;
-transform: translate(-35%, -30%);
-z-index: 0;
-animation-duration: 2.5s;
-animation-name: changeDivBackground;
-animation-iteration-count: infinite;
-animation-direction:normal;
-animation-timing-function: ease-in-out;
-}
-#cool-hover:after{
-border-radius: 9px;
-display: block;
-width: 108px;
-height: 108px;
-content: '';
-margin: 6px;
-background-size: cover;
-position: absolute;
-top: 0; left: 0;
-z-index: 1;
-}
-#cool-hover:hover:before{
-transform: translate(-50%, -50%) rotate(-180deg);
+            html, body { height:100%; }
+body {
+    -webkit-text-size-adjust: none;
+    max-width: 100vh;
+    margin: 0 auto;
+    padding: 10px;
+    font-family:sans-serif;
+    font-size:4vmin;
 }
 
-@keyframes changeDivBackground {
-
-    0% {
-    transform: translate(-50%, -70%) rotate(180deg);
+#main {
+    height:70vh;
+    margin:0;
+    padding:0;
+    position: relative;
 }
-
-}
-10% {
-    transform: translate(-50%, -50%) rotate(-190deg);
-}
-
-    50% {
-transform: translate(-40%, -50%) rotate(-20deg);
-}
-
-100% {
-    transform: translate(-40%, -60%) rotate(180deg);
-}
+.layer {
+    box-sizing:border-box;
+    position:fixed;
+    top:0;
+    left:0;
+    display:table;
+    table-layout:fixed;
+    width:100%;
+    height:100%;
 
 }
+.layer-cell {
+    display:table-cell;
+    vertical-align:middle;
 
-#cool-hover:hover{
-box-shadow: 0 0 35px rgba(0,0,0,0.3);
 }
+#main input[type=checkbox], #main input[type=radio] {
+    display:none;
+}
+
+#options button {
+    margin:0.5vmin;
+}
+#options label {
+    font-size:6vmin;
+}
+
+/* cube */
+.container {
+    width: 50vmin;
+    height: 50vmin;
+    position: relative;
+    margin: 0 auto 10vmin;
+    border: 0.25vmin solid #CCC;
+    border:0 none transparent;
+    -webkit-perspective: 250vmin;
+            perspective: 250vmin;
+}
+#cube {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-transition:-webkit-transform 1s linear;
+    transition:-webkit-transform 1s linear;
+    transition:transform 1s linear;
+    transition: transform 1s linear, -webkit-transform 1s linear;
+}
+#cube figure {
+    display: block;
+    position: absolute;
+    width: 49vmin;
+    height: 49vmin;
+    line-height: 40vmin;
+    font-size: 30vmin;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin:0;
+}
+#main input[type=checkbox]:checked+input+input+input+input+input+input+div #cube figure {
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+}
+#cube .front  { background: rgba(128,128,128,0.39);
+                animation-name: frontFly;
+                animation-duration: 1s;
+                animation-direction: normal;
+                animation-iteration-count: 1;
+                animation-timing-function: linear;
+                animation-delay: 3.1s;
+                 animation-fill-mode: forwards}
+#cube .back   { background: rgba(128,128,128,0.39);
+                animation-name: backFly;
+                animation-duration: 1s;
+                animation-direction: normal;
+                animation-iteration-count: 1;
+                animation-timing-function: linear;
+                animation-delay: 3.1s;
+                 animation-fill-mode: forwards}
+#cube .right  { background: rgba(128,128,128,0.39);
+                  animation-name: rightFly;
+                animation-duration: 1s;
+                animation-direction: normal;
+                animation-iteration-count: 1;
+                animation-timing-function: ease-in-out;
+                 animation-delay: 3.1s;
+                 animation-fill-mode: forwards}
+#cube .left   { background: rgba(128,128,128,0.39);
+                  animation-name: leftFly;
+                animation-duration: 1s;
+                animation-direction: normal;
+                animation-iteration-count: 1;
+                animation-timing-function: ease-in-out;
+                 animation-delay: 3.1s;
+                  animation-fill-mode: forwards}
+#cube .top    { background: rgba(128,128,128,0.39);
+                 animation-name: topFly;
+                animation-duration: 3s;
+                animation-direction: normal;
+                animation-iteration-count: 1;
+                animation-timing-function: ease-in-out;
+                 animation-delay: 3.1s;
+                 animation-fill-mode: forwards}
+#cube .bottom { background: rgba(128,128,128,0.39);
+                animation-name: bottomFly;
+                animation-duration: 3s;
+                animation-direction: normal;
+                animation-iteration-count: 1;
+                animation-timing-function: ease-in-out;
+                 animation-delay: 3.1s;
+                  animation-fill-mode: forwards}
+#cube .front  { -webkit-transform: translateZ(25vmin); transform: translateZ(25vmin); }
+#cube .back   { -webkit-transform: rotateX(-180deg) translateZ(25vmin); transform: rotateX(-180deg) translateZ(25vmin); }
+#cube .right { -webkit-transform: rotateY(90deg) translateZ(25vmin); transform: rotateY(90deg) translateZ(25vmin); }
+#cube .left { -webkit-transform: rotateY(-90deg) translateZ(25vmin); transform: rotateY(-90deg) translateZ(25vmin); }
+#cube .top { -webkit-transform: rotateX(90deg) translateZ(25vmin); transform: rotateX(90deg) translateZ(25vmin); }
+#cube .bottom { -webkit-transform: rotateX(-90deg) translateZ(25vmin); transform: rotateX(-90deg) translateZ(25vmin); }
+
+             @keyframes frontFly {
+
+                 from {
+
+                 }
+                 to {
+
+                      -webkit-transform: scale3d(4.5,4.5,4.5) ; transform: scale3d(4.5,4.5,4.5);
+                     opacity: 0;
+                     visibility: hidden;
+                 }
+             }
+
+              @keyframes backFly {
+
+                 from {
+
+                 }
+                 to {
+
+                      -webkit-transform:scaleZ(4.5) translateZ(-200vmin)  ; transform: scaleZ(4.5) translateZ(-200vmin) ;
+                      opacity: 0;
+                     display: none;
+                 }
+             }
+
+               @keyframes rightFly {
+
+                 from {
+
+                 }
+                 to {
+
+                      -webkit-transform: translateX(200vmin) rotateY(90deg) scale(4.5,4.5);
+                      transform: translateX(200vmin) rotateY(90deg) scale(4.5,4.5);
+                 }
+             }
+
+                @keyframes leftFly {
+
+                 from {
+
+                 }
+                 to {
+
+                       -webkit-transform: translateX(-200vmin) rotateY(90deg) scale(4.5,4.5);
+                        transform: translateX(-200vmin) rotateY(-90deg) scale(4.5,4.5);
+                 }
+             }
+
+                 @keyframes topFly {
+
+                 from {
+
+                 }
+                 to {
+
+                       -webkit-transform:translateY(-200vmin)   scale(4.5);
+                        transform: translateY(-200vmin)  scale(4.5);
+                 }
+             }
+
+                  @keyframes bottomFly {
+
+                 from {
+
+                 }
+                 to {
+
+                       -webkit-transform: translateY(400vmin)  scale(4.5);
+                        transform: translateY(400vmin) scale(4.5);
+                 }
+             }
+
+/*
+#main input[type=radio]:checked+input+input+input+input+input+div #cube {
+    -webkit-transform: translateZ(-25vmin);
+            transform: translateZ(-25vmin);
+}
+#main input[type=radio]:checked+input+input+input+input+div #cube {
+    -webkit-transform: translateZ(-25vmin) rotateX(-180deg);
+            transform: translateZ(-25vmin) rotateX(-180deg);
+}
+#main input[type=radio]:checked+input+input+input+div #cube {
+    -webkit-transform: translateZ(-25vmin) rotateY(-90deg);
+            transform: translateZ(-25vmin) rotateY(-90deg);
+}
+#main input[type=radio]:checked+input+input+div #cube {
+    -webkit-transform: translateZ(-25vmin) rotateY(90deg);
+            transform: translateZ(-25vmin) rotateY(90deg);
+}
+#main input[type=radio]:checked+input+div #cube {
+    -webkit-transform: translateZ(-25vmin) rotateX(-90deg);
+            transform: translateZ(-25vmin) rotateX(-90deg);
+}
+#main input[type=radio]:checked+div #cube {
+    -webkit-transform: translateZ(-25vmin) rotateX(90deg);
+            transform: translateZ(-25vmin) rotateX(90deg);
+}
+*/
+
+            #cube {
+                animation-name: cubeDirection;
+                animation-duration: 3s;
+                animation-direction: normal;
+                animation-iteration-count: 1;
+                animation-timing-function: ease-in-out;
+            }
+
+            @keyframes cubeDirection {
+
+
+                0% {
+                     -webkit-transform: translateZ(-25vmin) rotateY(45deg) rotateZ(180deg);
+            transform: translateZ(-25vmin) rotateY(45deg) rotateZ(160deg);
+                }
+
+                40% {
+                    -webkit-transform: translateZ(-25vmin) rotateY(90deg) rotateZ(256deg);
+            transform: translateZ(-25vmin) rotateY(90deg) rotateZ(256deg);
+                }
+
+
+                100% {
+                     -webkit-transform: translateZ(-25vmin) rotateX(90deg);
+            transform: translateZ(-25vmin) rotateX(90deg);
+                }
+            }
+
+      #heading {
+          font-size: 2.5vmax;
+          opacity: 0;
+          position: absolute;
+          top: 32%;
+          text-align: center;
+          animation-name: pixelpostText ;
+                animation-delay: 3.9s;
+                animation-direction: normal;
+                animation-iteration-count: 1;
+                animation-timing-function: ease-in-out;
+                animation-duration: 1.5s;
+          animation-fill-mode: forwards;
+          z-index: -10;
+      }
+
+            @keyframes pixelpostText {
+                from {
+                    opacity: 0;
+                }
+
+                to {
+                    width: auto;
+                    height: auto;
+                    opacity: 1;
+                    color: #cc7b3f;
+                }
+            }
+
+            #staticglitch {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+
+                opacity: 0;
+                 animation-name: staticglitch ;
+                animation-delay: 6.5s;
+                animation-direction: normal;
+                animation-iteration-count: 1;
+                animation-timing-function: ease-in-out;
+                animation-duration: 1.5s;
+                animation-fill-mode: forwards;
+
+            }
+
+            @keyframes staticglitch {
+                from {
+                    height: 0;
+                    width: 0;
+
+                }
+                to {
+                    top:0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    z-index: 20;
+                    opacity: 1;
+                }
+            }
 
         </style>
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <div style="height: 100vh; width:100%; border:1px black solid; position: absolute; top:0px; left:0px; background-color:white;"> </div>
-        <main style="position:absolute; width:100%; top:100vh; left:0px; margin:0px; background-color: white;"> 
-<div id="cool-hover"><p style="transform: scale(.25, 1);font-size: 5vw;font-family: 'Press Start 2P', cursive; text-align: center; width:100%;color:rgba(207, 104, 20, 0.438) "> PIXEL PERFECT POST </p> </div>
+
+
+<section id="main">
+
+  <input type="checkbox" id="cmd0" name="cmd0">
+
+  <input type="radio" id="cmd1" name="cmd" checked>
+  <input type="radio" id="cmd2" name="cmd">
+  <input type="radio" id="cmd3" name="cmd">
+  <input type="radio" id="cmd4" name="cmd">
+  <input type="radio" id="cmd5" name="cmd">
+  <input type="radio" id="cmd6" name="cmd">
+
+  <div class="layer"><div class="layer-cell">
+      <section class="container">
+        <div id="cube">
+          <figure class="front"></figure>
+          <figure class="bottom"></figure>
+          <figure class="right"></figure>
+          <figure class="left"></figure>
+          <figure class="top"></figure>
+          <figure class="back"></figure>
+        </div>
+      </section>
+  </div></div>
+
+  <section id="heading" >
+
+    <p>
+
+      <img src="{% static 'PPP Logo.png' %}" height="15%" width="16%">
+    </p>
 
 
 
-<div style="background-color:rgba(255,255,255,0.2); box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); width:99%; margin-left: 0.5%;">
-<p style="z-index:5;margin-top:20px; text-align:center; color: white; width:90%; padding:15px; "> Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
+  </section>
+</section>
 
- Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
+        <img id="staticglitch" src="{% static 'static-glitch.gif' %}">
+        <script>
 
- Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
-
- Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
-
- Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
-
- Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
-
- Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
-
- Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
-
- Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
-
- Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
- </p>
- </div>
-</main>
-
-
-
-
-        
-        <script src="" async defer></script>
+            setTimeout(function () {
+	location.replace("{% url 'home' %}");
+}, 9000);
+        </script>
     </body>
 </html>

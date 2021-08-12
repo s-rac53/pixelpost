@@ -59,6 +59,10 @@ def ripples(request):
 
     return render(request,'PPP/ripples.html')
 
+def home(request):
+
+    return render(request,'PPP/home.html')
+
 
 
 

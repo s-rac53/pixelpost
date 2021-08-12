@@ -38,6 +38,7 @@ urlpatterns = [
     path('portfolio/',views.portflio, name="portfolio"),
     path('sitemap.xml/', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
     path('ripples/', views.ripples, name='ripples'),
+    path('home/', views.home, name='home')
 
 ]
 
