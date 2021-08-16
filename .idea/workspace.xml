@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="407b8d76-6e10-4aba-b6b8-fa32c03eec07" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pixelperfectpost/static/flower.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pixelperfectpost/static/laptop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pixelperfectpost/static/lion.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pixelperfectpost/static/pixels.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pixelperfectpost/static/suit-2619320_1920.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pixelperfectpost/templates/PPP/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/pixelperfectpost/templates/PPP/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pixelperfectpost/templates/PPP/homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/pixelperfectpost/templates/PPP/homepage.html" afterDir="false" />
     </list>
@@ -53,8 +48,8 @@
       <file leaf-file-name="homepage.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pixelperfectpost/templates/PPP/homepage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="427" column="7" selection-start-line="427" selection-start-column="7" selection-end-line="427" selection-end-column="7" />
+            <state relative-caret-position="6405">
+              <caret line="427" column="5" selection-start-line="427" selection-start-column="5" selection-end-line="427" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -62,8 +57,8 @@
       <file leaf-file-name="home.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pixelperfectpost/templates/PPP/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="64" column="24" lean-forward="true" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
+            <state relative-caret-position="277">
+              <caret line="48" column="42" selection-start-line="48" selection-start-column="42" selection-end-line="48" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -204,6 +199,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -255,7 +251,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -335,8 +330,8 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3305921" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24942264" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3305921" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24942264" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -559,32 +554,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pixelperfectpost/static/flower.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/pixelperfectpost/static/flower.jpg" />
     <entry file="file://$PROJECT_DIR$/pixelperfectpost/static/faceless.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/pixelperfectpost/static/lion.jpeg" />
+    <entry file="file://$PROJECT_DIR$/pixelperfectpost/static/laptop.png" />
+    <entry file="file://$PROJECT_DIR$/pixelperfectpost/static/suit-2619320_1920.jpg" />
     <entry file="file://$PROJECT_DIR$/pixelperfectpost/templates/PPP/homepage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="427" column="7" selection-start-line="427" selection-start-column="7" selection-end-line="427" selection-end-column="7" />
+        <state relative-caret-position="6405">
+          <caret line="427" column="5" selection-start-line="427" selection-start-column="5" selection-end-line="427" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pixelperfectpost/static/lion.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pixelperfectpost/static/laptop.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pixelperfectpost/static/suit-2619320_1920.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/pixelperfectpost/templates/PPP/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="64" column="24" lean-forward="true" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
+        <state relative-caret-position="277">
+          <caret line="48" column="42" selection-start-line="48" selection-start-column="42" selection-end-line="48" selection-end-column="42" />
         </state>
       </provider>
     </entry>
