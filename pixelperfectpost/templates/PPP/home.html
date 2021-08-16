@@ -44,6 +44,10 @@
 <canvas id="canvas1"></canvas>
 </div>
 
+<main>
+
+</main>
+
 
 
 <script>
@@ -57,28 +61,36 @@
         const canvas = document.getElementById('canvas1');
        const image1 = new Image();
        image1.src = img1;
+       var time = 25000;
 
-      timer = setInterval(myTimer, 24700);
+
+        var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+        if( width > 375) {
+            time = 74100;
+            timer = setInterval(myTimer, 24700);
 
 
-function myTimer() {
+                function myTimer() {
 
-source = image1.getAttribute("src");
-ctx.clearRect(0,0, canvas.width, canvas.height);
-  if(source === img1) {
-      image1.src = img2;
+                      source = image1.getAttribute("src");
+                      ctx.clearRect(0,0, canvas.width, canvas.height);
+                              if(source === img1) {
+                                   image1.src = img2;
 
-  }
+                                                 }
 
-   if(source === img2) {
-      image1.src = img3;
-  }
+                              if(source === img2) {
+                                   image1.src = img3;
+                                                   }
 
-   if(source === img3) {
-      image1.src = img1;
+                               if(source === img3) {
+                                   image1.src = img1;
 
-  }
-}
+                                                  }
+                               }
+        }
+
+
 
 
 
@@ -179,7 +191,7 @@ image1.addEventListener('load', function () {
 
 
 
-    }, 60000);
+    }, time);
           }
 
 
