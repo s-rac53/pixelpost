@@ -2,7 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="407b8d76-6e10-4aba-b6b8-fa32c03eec07" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pixelperfectpost/static/NicePng_hummingbird-png_409052.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pixelperfectpost/static/anime1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pixelperfectpost/static/anime4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pixelperfectpost/static/anime5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pixelperfectpost/static/anime6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pixelperfectpost/static/anime7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pixelperfectpost/static/blue-suit.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pixelperfectpost/static/faceless.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pixelperfectpost/static/noun_Cursor_122767.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pixelperfectpost/static/noun_Cursor_7767.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pixelperfectpost/static/noun_Right Arrow_140380.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pixelperfectpost/templates/PPP/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/pixelperfectpost/templates/PPP/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pixelperfectpost/templates/PPP/homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/pixelperfectpost/templates/PPP/homepage.html" afterDir="false" />
     </list>
@@ -45,20 +55,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="homepage.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="homepage.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pixelperfectpost/templates/PPP/homepage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6405">
-              <caret line="427" column="5" selection-start-line="427" selection-start-column="5" selection-end-line="427" selection-end-column="5" />
+            <state relative-caret-position="37">
+              <caret line="358" selection-start-line="358" selection-end-line="358" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pixelperfectpost/templates/PPP/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="48" column="42" selection-start-line="48" selection-start-column="42" selection-end-line="48" selection-end-column="42" />
+            <state relative-caret-position="-315">
+              <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -173,8 +183,8 @@
         <option value="$PROJECT_DIR$/pixelperfectpost/templates/PPP/contact.html" />
         <option value="$PROJECT_DIR$/pixelperfectpost/views.py" />
         <option value="$PROJECT_DIR$/pixelpost/urls.py" />
-        <option value="$PROJECT_DIR$/pixelperfectpost/templates/PPP/homepage.html" />
         <option value="$PROJECT_DIR$/pixelperfectpost/templates/PPP/home.html" />
+        <option value="$PROJECT_DIR$/pixelperfectpost/templates/PPP/homepage.html" />
       </list>
     </option>
   </component>
@@ -322,7 +332,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -354,7 +363,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pixelperfectpost/templates/aboutus.html" />
     <entry file="file://$PROJECT_DIR$/pixelperfectpost/templates/aboutus.html" />
     <entry file="file://$PROJECT_DIR$/pixelpost/urls.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -561,17 +569,20 @@
     <entry file="file://$PROJECT_DIR$/pixelperfectpost/static/lion.jpeg" />
     <entry file="file://$PROJECT_DIR$/pixelperfectpost/static/laptop.png" />
     <entry file="file://$PROJECT_DIR$/pixelperfectpost/static/suit-2619320_1920.jpg" />
-    <entry file="file://$PROJECT_DIR$/pixelperfectpost/templates/PPP/homepage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6405">
-          <caret line="427" column="5" selection-start-line="427" selection-start-column="5" selection-end-line="427" selection-end-column="5" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/pixelperfectpost/static/noun_Cursor_7767.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/pixelperfectpost/templates/PPP/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="48" column="42" selection-start-line="48" selection-start-column="42" selection-end-line="48" selection-end-column="42" />
+        <state relative-caret-position="-315">
+          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pixelperfectpost/templates/PPP/homepage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="37">
+          <caret line="358" selection-start-line="358" selection-end-line="358" />
         </state>
       </provider>
     </entry>

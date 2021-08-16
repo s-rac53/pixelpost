@@ -356,21 +356,7 @@ vertical-align:middle;
                 }
             }
 
-            #staticglitch {
-                position: absolute;
-                top: 50%;
-                left: 50%;
 
-                opacity: 0;
-                animation-name: staticglitch ;
-                animation-delay: 6.5s;
-                animation-direction: normal;
-                animation-iteration-count: 1;
-                animation-timing-function: ease-in-out;
-                animation-duration: 1.5s;
-                animation-fill-mode: forwards;
-
-            }
 
             @keyframes staticglitch {
                 from {
@@ -420,7 +406,7 @@ vertical-align:middle;
   </section>
 </section>
 
-        <img id="staticglitch" src="{% static 'static-glitch.gif' %}">
+
         <script>
 
             setTimeout(function () {
