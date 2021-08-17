@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquerykeyframes/0.0.9/jquery.keyframes.min.js" integrity="sha512-QP5Go99SHY6mavZ/iCuYwwN492DcSExp65qhQ6xsFVDhYv1S/d+7V9Di06XxVtVpqp+NvcFIq8Fx13NkmmMUng==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -53,6 +54,26 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+        }
+
+        #arrowFont {
+            animation: jumpingArrow 1.5s linear infinite;
+            position: absolute;
+            bottom: 3%;
+            left: 50%;
+            transform: translate(0%, -50%);
+            font-size: 4vmin;
+            color: rgba(121, 121, 121, 0.34);
+        }
+
+        @keyframes jumpingArrow {
+             0% {
+                 bottom: 3%;
+             }
+
+            100% {
+                bottom: 0.5%;
+            }
         }
 
 
@@ -213,7 +234,10 @@ outline: dashed rgba(32, 32, 32, 0.85) 15px;
 	-moz-box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
 	box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
     outline: none;
+
 }
+
+
  #menu {
      position: absolute;
      top:20px;
@@ -249,10 +273,11 @@ outline: dashed rgba(32, 32, 32, 0.85) 15px;
 
     <img id="image" src = {% static 'PPP Logo.png' %} >
 <canvas id="canvas1"></canvas>
+   <a href="#horizontal-scroll-wrapper"> <i id="arrowFont" class="fas fa-angle-double-down"></i></a>
 </div>
 
 
- <div class="horizontal-scroll-wrapper">
+ <div id="horizontal-scroll-wrapper" class="horizontal-scroll-wrapper">
 
   <img class="first"  src="{% static 'face.jpg' %}" >
   <img src="{% static 'anime3.png' %}" >
