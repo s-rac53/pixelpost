@@ -48,6 +48,10 @@
             height: 70%;
             width: 70%;
             display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
 
 
@@ -62,13 +66,13 @@
         }
 
         #arrowFont {
-            animation: jumpingArrow 1.5s linear infinite;
+            animation: jumpingArrow 1.32s linear infinite;
             position: absolute;
             bottom: 3%;
             left: 50%;
             transform: translate(0%, -50%);
             font-size: 4vmin;
-            color: rgba(121, 121, 121, 0.34);
+            color:rgba(255,255,255,0.4);
 
         }
         
@@ -76,10 +80,12 @@
 
         @keyframes jumpingArrow {
              0% {
+                 opacity: 0.3;
                  bottom: 3%;
              }
 
             100% {
+                opacity: 1;
                 bottom: 0.5%;
             }
         }
@@ -93,7 +99,7 @@
             display: flex;
             flex-wrap: nowrap;
             padding: 20px;
-            margin-top: 5vh;
+            margin-top: 15vh;
              overflow-x: hidden;
             overflow-y: hidden;
             border: 5px solid black;
@@ -104,11 +110,11 @@
 
 
 .first {
-	-webkit-animation: bannermove 17s linear infinite;
-	   -moz-animation: bannermove 17s linear infinite;
-	    -ms-animation: bannermove 17s linear infinite;
-	     -o-animation: bannermove 17s linear infinite;
-	        animation: bannermove 17s linear infinite;
+	-webkit-animation: bannermove 20s linear infinite;
+	   -moz-animation: bannermove 20s linear infinite;
+	    -ms-animation: bannermove 20s linear infinite;
+	     -o-animation: bannermove 20s linear infinite;
+	        animation: bannermove 20s linear infinite;
 }
 
 @keyframes bannermove{
@@ -116,7 +122,7 @@
     margin-left: 0px;
  }
  100% {
-    margin-left: -500%;
+    margin-left: -1000%;
  }
 
 }
@@ -126,7 +132,7 @@
    margin-left: 0px;
  }
  100% {
-   margin-left: -500%;
+   margin-left: -1000%;
  }
 
 }
@@ -136,7 +142,7 @@
    margin-left: 0px;
  }
  100% {
-   margin-left: -500%;
+   margin-left: -1000%;
  }
 
 }
@@ -146,7 +152,7 @@
    margin-left: 0px;
  }
  100% {
-   margin-left: -500%;
+   margin-left: -1000%;
  }
 
 }
@@ -156,7 +162,7 @@
         margin-left: 0px;
     }
     100% {
-        margin-left: -500%;
+        margin-left: -1000%;
     }
 }
 
@@ -250,7 +256,7 @@ outline: dashed rgba(32, 32, 32, 0.85) 15px;
      right: 5.5%;
      font-size: 15px;
      z-index: 12;
-     color: whitesmoke;
+     color: rgba(255,255,255,0.4);
  }
 
  .horizontalMenu {
@@ -327,7 +333,7 @@ outline: dashed rgba(32, 32, 32, 0.85) 15px;
 
     <img id="image" src = {% static 'PPP Logo.png' %} >
 <canvas id="canvas1"></canvas>
-   <a href="#horizontal-scroll-wrapper"> <i id="arrowFont" class="fas fa-angle-double-down"></i></a>
+   <a href="#anchor"> <i id="arrowFont" class="fas fa-angle-double-down"></i></a>
     <i id="hamburger" onclick="showVerticalMenu()" class="fas fa-bars"></i>
 
     <nav id="verticalMenuNav" onclick="closeNavWindow()" style="position: absolute;top: 0; left: 0px; height: 100vh; width: 100%; background-color: rgba(0,0,0,0.81)">
@@ -343,16 +349,11 @@ outline: dashed rgba(32, 32, 32, 0.85) 15px;
 
 
 
-<div style="margin-top: 15vh">
+<div id="anchor" style="margin-top: 15vh">
 
-    <h1 style="text-align: center; font-family: 'Changa', sans-serif; font-size: 5vmax; text-shadow: 2px 2px 4px #000000; color: #0a1a2b ">EVERY PIXEL HAS A STORY TO TELL...</h1>
-
-    <main>
+    <h1  style="text-align: center; font-family: 'Changa', sans-serif; font-size: 5vmax; text-shadow: 2px 2px 4px #000000; color: #0a1a2b ">EVERY PIXEL HAS A STORY TO TELL...</h1>
 
 
-
-
-    </main>
 
 
 </div>
@@ -378,6 +379,15 @@ outline: dashed rgba(32, 32, 32, 0.85) 15px;
   <img src="{% static 'face.jpg' %}" >
 
 </div>
+
+<main>
+
+<div style="border: 1px black solid; height: 90vh; width: 100%; background-color: #184267; margin-top: 5%">
+
+</div>
+
+
+    </main>
 <p>Another day as a pixelhead</p>
 
 
