@@ -64,7 +64,10 @@
             transform: translate(0%, -50%);
             font-size: 4vmin;
             color: rgba(121, 121, 121, 0.34);
+
         }
+        
+
 
         @keyframes jumpingArrow {
              0% {
@@ -236,16 +239,25 @@ outline: dashed rgba(32, 32, 32, 0.85) 15px;
     outline: none;
 
 }
+ #hamburger {
+     position: absolute;
+     top: 5%;
+     right: 5.5%;
+     font-size: 15px;
+     z-index: 12;
+     color: whitesmoke;
+ }
 
-
- #menu {
+ .horizontalMenu {
      position: absolute;
      top:20px;
      right: 3.5%;
-     display: flex;
+     display: none;
+
+
 
  }
-  #menu a {
+  .horizontalMenu a {
       float: left;
       display: inline;
       text-decoration: none;
@@ -254,7 +266,44 @@ outline: dashed rgba(32, 32, 32, 0.85) 15px;
       color: rgba(255, 255, 255, 0.47);
       font-size: 2.2vmin;
       font-weight: 900;
+
   }
+@media only screen and (min-width: 768px) {
+            .horizontalMenu {
+
+                display: flex;
+            }
+
+            #hamburger {
+                visibility: hidden;
+            }
+
+
+        }
+
+        #verticalMenu {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+
+        #verticalMenuNav {
+            display: none;
+        }
+
+        #verticalMenu a {
+            display: block;
+            padding: 4vmin;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 2.2vmin;
+            font-weight: 900;
+            color: rgba(255, 255, 255, 0.47);
+
+        }
+
 
     </style>
 
@@ -263,17 +312,28 @@ outline: dashed rgba(32, 32, 32, 0.85) 15px;
 <div class="header">
     <img id="logo" src="{% static 'PPP Logo.png' %}"> <!--Logo-->
 
-    <div id="menu">
+    <nav class="horizontalMenu">
         <a href="#">SERVICES</a>
         <a href="#">PORTFOLIO</a>
         <a href="#">ABOUT US</a>
         <a href="#">CONTACT</a>
-    </div>
+    </nav>
 
 
     <img id="image" src = {% static 'PPP Logo.png' %} >
 <canvas id="canvas1"></canvas>
    <a href="#horizontal-scroll-wrapper"> <i id="arrowFont" class="fas fa-angle-double-down"></i></a>
+    <i id="hamburger" onclick="showVerticalMenu()" class="fas fa-bars"></i>
+
+    <nav id="verticalMenuNav" onclick="closeNavWindow()" style="position: absolute;top: 0; left: 0px; height: 100vh; width: 100%; background-color: rgba(0,0,0,0.81)">
+        <div id="verticalMenu">
+         <a href="#">SERVICES</a>
+        <a href="#">PORTFOLIO</a>
+        <a href="#">ABOUT US</a>
+        <a href="#">CONTACT</a>
+        </div>
+    </nav>
+
 </div>
 
 
@@ -298,7 +358,19 @@ outline: dashed rgba(32, 32, 32, 0.85) 15px;
 
 </div>
 
-Hi <br> Hi
+<div>
+    Hi <br> Hi<br><br><br>
+    <h2 style="text-align: center">EVERY PIXEL HAS A STORY TO TELL</h2>
+
+    <main>
+        <p>Another day as a pixelhead</p>
+        <
+
+    </main>
+
+
+</div>
+
 
 
 <script>
@@ -402,7 +474,7 @@ image1.addEventListener('load', function () {
 
             draw () {
                 ctx.beginPath();
-                ctx.fillStyle = 'white';
+                ctx.fillStyle = 'rgba(206, 220, 245, 0.4)';
                 ctx.arc(this.x,this.y,this.size,0,Math.PI * 2);
                 ctx.fill();
             }
@@ -467,6 +539,15 @@ var x = window.matchMedia("(min-width: 768px)")
 myFunction(x) // Call listener function at run time
 x.addListener(myFunction) // Attach listener function on state changes
 
+   function closeNavWindow() {
+
+       $("#verticalMenuNav").css({'display':'none', 'transition':'all 0.5s ease'});
+   }
+
+function showVerticalMenu() {
+    $("#verticalMenuNav").css('display','block');
+
+}
 
 </script>
 </body>
