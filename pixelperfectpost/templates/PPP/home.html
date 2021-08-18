@@ -57,8 +57,9 @@
 
 
         #canvas1 {
-            width: 70%;
-            height: 70%;
+            width: 80vh;
+            height: 80vh;
+            max-width: 100%;
             position: absolute;
             top: 50%;
             left: 50%;
@@ -359,6 +360,13 @@ outline: dashed rgba(32, 32, 32, 0.85) 15px;
 </div>
 
 
+
+
+<main>
+
+<div style="border: 1px black solid; height: 90vh; width: 100%; background-color: #184267; margin-top: 5%">
+
+</div>
  <div id="horizontal-scroll-wrapper" class="horizontal-scroll-wrapper">
 
   <img class="first"  src="{% static 'face.jpg' %}" >
@@ -379,13 +387,6 @@ outline: dashed rgba(32, 32, 32, 0.85) 15px;
   <img src="{% static 'face.jpg' %}" >
 
 </div>
-
-<main>
-
-<div style="border: 1px black solid; height: 90vh; width: 100%; background-color: #184267; margin-top: 5%">
-
-</div>
-
 
     </main>
 <p>Another day as a pixelhead</p>
@@ -492,7 +493,7 @@ image1.addEventListener('load', function () {
 
             draw () {
                 ctx.beginPath();
-                ctx.fillStyle = 'rgba(206, 220, 245, 0.4)';
+                ctx.fillStyle = 'rgba(206, 220, 245, 0.6)';
                 ctx.arc(this.x,this.y,this.size,0,Math.PI * 2);
                 ctx.fill();
             }
