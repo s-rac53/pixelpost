@@ -13,6 +13,10 @@
     <title>Title</title>
     <style>
   @import url('https://fonts.googleapis.com/css2?family=Changa&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+
 
         body {
             margin: 0;
@@ -101,7 +105,7 @@
             display: flex;
             flex-wrap: nowrap;
             padding: 20px;
-            margin-top: 15vh;
+            margin-top: 4vh;
              overflow-x: hidden;
             overflow-y: hidden;
             border: 5px solid black;
@@ -112,11 +116,11 @@
 
 
 .first {
-	-webkit-animation: bannermove 20s linear infinite;
-	   -moz-animation: bannermove 20s linear infinite;
-	    -ms-animation: bannermove 20s linear infinite;
-	     -o-animation: bannermove 20s linear infinite;
-	        animation: bannermove 20s linear infinite;
+	-webkit-animation: bannermove 60s linear infinite;
+	   -moz-animation: bannermove 60s linear infinite;
+	    -ms-animation: bannermove 60s linear infinite;
+	     -o-animation: bannermove 30s linear infinite;
+	        animation: bannermove 60s linear infinite;
 }
 
 @keyframes bannermove{
@@ -314,8 +318,90 @@ outline: dashed rgba(32, 32, 32, 0.85) 15px;
             font-size: 2.2vmin;
             font-weight: 900;
             color: rgba(255, 255, 255, 0.47);
-
         }
+
+        #portfolioHeading {
+            text-align: left;
+            margin-top: 5%;
+            font-family: 'DM Serif Display', serif;
+            font-size: 2.5vmax;
+            color: rgba(0,0,0,0.79);
+            letter-spacing: 3px;
+            margin-left: 15px
+        }
+         #showPortfolio {
+            width: 45vw;
+             max-width: 230px;
+             float: right;
+             margin:2vmax 5vw 0px 0px;
+            padding: 1% 5%;
+            border: 5px solid rgba(255, 255, 255, 0.82);
+            border-radius: 20px;
+            color: whitesmoke;
+            cursor: pointer;
+             background-color: black;
+             clear: both;
+        }
+
+         #showPortfolio:hover {
+            background-color: rgba(154, 154, 154, 0.82);
+            color: black;
+        }
+.services {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: black;
+}
+
+#servicesHeading{
+    text-align: left;
+    margin-top: 12vmax;
+    font-family: 'Changa', sans-serif;
+    font-size: 2.5vmax;
+    color: rgba(0, 0, 0, 0.67);
+    letter-spacing: 3px;
+    margin-left: 15px;
+}
+
+#servicesPara {
+    color: black;
+    text-align: center;
+    margin: 5vmax 5px;
+    font-family: 'Noto Sans JP', sans-serif;
+
+
+}
+
+.circle {
+  height: 100%;
+    width: 100%;
+  position: absolute;
+    background-color: #797979;
+    clip-path: circle(30% at 50% 50%);
+    float: right;
+    padding: 5px;
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+
+}
+
+        #showServices {
+            position: absolute;
+            bottom: 1%;
+            right: 8%;
+            padding: 1% 5%;
+            border: 5px solid rgba(255, 255, 255, 0.82);
+            border-radius: 20px;
+            color: whitesmoke;
+            cursor: pointer;
+        }
+
+        #showServices:hover {
+            background-color: rgba(242, 242, 242, 0.82);
+            color: black;
+        }
+
+
 
 
     </style>
@@ -326,8 +412,8 @@ outline: dashed rgba(32, 32, 32, 0.85) 15px;
     <img id="logo" src="{% static 'PPP Logo.png' %}"> <!--Logo-->
 
     <nav class="horizontalMenu">
-        <a href="#">SERVICES</a>
-        <a href="#">PORTFOLIO</a>
+        <a href="#servicesHeading">SERVICES</a>
+        <a href="#portfolioHeading">PORTFOLIO</a>
         <a href="#">ABOUT US</a>
         <a href="#">CONTACT</a>
     </nav>
@@ -340,8 +426,8 @@ outline: dashed rgba(32, 32, 32, 0.85) 15px;
 
     <nav id="verticalMenuNav" onclick="closeNavWindow()" style="position: absolute;top: 0; left: 0px; height: 100vh; width: 100%; background-color: rgba(0,0,0,0.81)">
         <div id="verticalMenu">
-         <a href="#">SERVICES</a>
-        <a href="#">PORTFOLIO</a>
+         <a href="#servicesHeading">SERVICES</a>
+        <a href="#portfolioHeading">PORTFOLIO</a>
         <a href="#">ABOUT US</a>
         <a href="#">CONTACT</a>
         </div>
@@ -353,7 +439,7 @@ outline: dashed rgba(32, 32, 32, 0.85) 15px;
 
 <div id="anchor" style="margin-top: 15vh">
 
-    <h1  style="text-align: center; font-family: 'Changa', sans-serif; font-size: 5vmax; text-shadow: 2px 2px 4px #000000; color: #0a1a2b ">EVERY PIXEL HAS A STORY TO TELL...</h1>
+    <h1  style="text-align: center; font-family: 'Press Start 2P', cursive; font-size: 3vmax; text-shadow: 2px 2px 4px #000000; color: black; word-spacing: 7px; line-height: 5vmax; letter-spacing: 5px ">EVERY PIXEL HAS A STORY TO TELL</h1>
 
 
 
@@ -368,6 +454,8 @@ outline: dashed rgba(32, 32, 32, 0.85) 15px;
 <div style="border: 1px black solid; height: 90vh; width: 100%; background-color: #184267; margin-top: 5%">
 
 </div>
+    <h1 id="portfolioHeading">OUR CLIENTS, <span style="color: #ff2520">OUR LEGACY</span></h1>
+    <div style="position: relative">
  <div id="horizontal-scroll-wrapper" class="horizontal-scroll-wrapper">
 
   <img class="first"  src="{% static 'face.jpg' %}" >
@@ -388,9 +476,24 @@ outline: dashed rgba(32, 32, 32, 0.85) 15px;
   <img src="{% static 'face.jpg' %}" >
 
 </div>
+        </div>
+    <a href="{% url 'portfolio' %}" ><div id="showPortfolio">Show <span style="color:  #ff2520"><i>Portfolio</i></span></div></a>
+
+    <section>
+        <h1 id="servicesHeading">SO, HERE'S WHAT WE DO</h1>
+         <p id="servicesPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br>
+           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
+           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br>
+           Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br>
+           Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="services">
+             <div class="circle"></div>
+            <a href="{% url 'services' %}" ><div id="showServices">Show <span style="color:  #ff2520"><i>Services</i></span></div></a>
+        </div>
+    </section>
 
     </main>
-<p>Another day as a pixelhead</p>
+
 
 
 <script>
@@ -543,11 +646,11 @@ image1.addEventListener('load', function () {
 function myFunction(x) {
   if (x.matches) { // If media query matches
 
-    $(".first").css('-webkit-animation','bannermove1 16s linear infinite');
-     $(".first").css('-moz-animation','bannermove1 16s linear infinite');
-    $(".first").css('-ms-animation','bannermove1 16s linear infinite');
-    $(".first").css('-o-animation','bannermove1 16s linear infinite');
-    $(".first").css('animation','bannermove1 16s linear infinite');
+    $(".first").css('-webkit-animation','bannermove1 40s linear infinite');
+     $(".first").css('-moz-animation','bannermove1 40s linear infinite');
+    $(".first").css('-ms-animation','bannermove1 40s linear infinite');
+    $(".first").css('-o-animation','bannermove1 40s linear infinite');
+    $(".first").css('animation','bannermove1 40s linear infinite');
 
 
 
@@ -561,13 +664,14 @@ x.addListener(myFunction) // Attach listener function on state changes
 
    function closeNavWindow() {
 
-       $("#verticalMenuNav").css({'display':'none', 'transition':'all 0.5s ease'});
+       $("#verticalMenuNav").css({'display':'none'});
    }
 
 function showVerticalMenu() {
     $("#verticalMenuNav").css('display','block');
 
 }
+
 
 </script>
 </body>
