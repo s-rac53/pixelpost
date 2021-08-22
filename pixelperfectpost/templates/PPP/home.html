@@ -321,7 +321,7 @@ outline: dashed rgba(32, 32, 32, 0.85) 15px;
             letter-spacing: 3px;
             margin-left: 15px
         }
-         #showPortfolio {
+         #showButton {
             width: 35vw;
              max-width: 230px;
              float: right;
@@ -333,9 +333,10 @@ outline: dashed rgba(32, 32, 32, 0.85) 15px;
             cursor: pointer;
              background-color: black;
              clear: both;
+             text-align: center;
         }
 
-         #showPortfolio:hover {
+         #showButton:hover {
             background-color: rgba(154, 154, 154, 0.82);
             color: black;
         }
@@ -393,13 +394,7 @@ outline: dashed rgba(32, 32, 32, 0.85) 15px;
             color: black;
         }
 
-        #contact {
-             background-image: url("{% static 'blue-dots.png' %}");
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: top right;
-            background-attachment: scroll;
-        }
+
 
         #about {
             position: relative;
@@ -416,11 +411,39 @@ outline: dashed rgba(32, 32, 32, 0.85) 15px;
             height: 30vmax;
             width: 30vmax;
             border-radius: 50%;
+            border: 5px double blanchedalmond;
             background-color: whitesmoke;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            filter: grayscale(100%) brightness(100%);
 
         }
 
+    #contact {
+             background-image: url("{% static 'blue-dots.png' %}");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top right;
+            background-attachment: scroll;
+            width: 100%;height: 70vh;
+            margin-top: 13vmax;
+            padding: 2%;
 
+        }
+
+        .aboutQuarters {
+            position:relative;
+            display: inline-block;
+            width: 50%;
+            float: left;
+            height: 50vh;
+        }
+
+        .quatersContent {
+            position:absolute;
+            width: 80%;
+            padding: 5%;
+            text-align: center;
+        }
 
 
     </style>
@@ -498,7 +521,7 @@ outline: dashed rgba(32, 32, 32, 0.85) 15px;
 
 </div>
         </div>
-    <a href="{% url 'portfolio' %}" ><div id="showPortfolio">Show <span style="color:  #ff2520"><i>Portfolio</i></span></div></a>
+    <a href="{% url 'portfolio' %}" ><div id="showButton">Show <span style="color:  #ff2520"><i>Portfolio</i></span></div></a>
 
     <section>
         <h1 id="servicesHeading">SO, HERE'S WHAT WE DO</h1>
@@ -517,30 +540,31 @@ outline: dashed rgba(32, 32, 32, 0.85) 15px;
 
 <footer>
     <section id="about">
-        <div style="position:relative; display: inline-block; width: 50%; background-color: black; float: left; height: 50vh; "><div style="position:absolute; width: 80%; padding: 5%; top: 0px; left:0px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br>
+        <div class="aboutQuarters" style="background-color: black; border-right: 1px ridge rgba(255,235,205,0.5); border-bottom: 1px ridge rgba(255,235,205,0.5)" ><div class="quatersContent" style=" top: 0px; left:0px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br>
+           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
+           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br>
+           Duis aute irure dolor in in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br>
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div></div>
+        <div class="aboutQuarters" style="background-color: #404040;" ><div class="quatersContent" style=" top: 0px; right:0px; ">Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br>
            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br>
            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br>
             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div></div>
-        <div style="position:relative; display: inline-block; width: 50%; background-color: red; float: left; height: 50vh; "><div style="position:absolute; width: 80%;padding: 5%; top: 0px; right:0px; margin: 0px">Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br>
+        <div class="aboutQuarters" style="background-color: #808080;" ><div class="quatersContent" style="bottom: 0px; left:0px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br>
            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br>
            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br>
             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div></div>
-        <div style="position:relative; display: inline-block; width: 50%; background-color: #cc7b3f; float: left; height: 50vh"><div style="position:absolute; width: 80%;padding: 5%; bottom: 0px; left:0px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br>
-           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
-           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br>
-           Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br>
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div></div>
-        <div style="position:relative; display: inline-block; width: 50%; background-color: hotpink; float: left; height: 50vh"><div style="position:absolute; width: 80%;padding: 5%; bottom: 0px; right:0px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br>
+        <div class="aboutQuarters" style="background-color: #bfbfbf;border-left: 1px ridge rgba(255,235,205,0.5); border-top: 1px ridge rgba(255,235,205,0.51)" ><div class="quatersContent" style="bottom: 0px; right:0px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br>
            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br>
            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br>
             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div></div>
         <img id="picCircle" src="{% static 'face.jpg' %}">
+         <a href="{% url 'about' %}" ><div id="showButton">Our <span style="color:  #ff2520"><i>Story</i></span></div></a>
     </section>
     <section id="contact">
-
+      Hi <br> Contact section
     </section>
 </footer>
 
