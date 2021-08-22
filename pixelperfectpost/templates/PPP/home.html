@@ -19,10 +19,50 @@
 
 
         body {
-            margin: 0;
-            padding: 0;
-            background-color: whitesmoke;
-        }
+  margin: 0;
+  overflow-x: hidden;
+    animation-duration: 2.5s;
+        animation-name: changeBackground;
+        animation-iteration-count: infinite;
+        animation-direction:normal;
+        animation-timing-function: ease-in-out;
+}
+
+@keyframes changeBackground {
+            0% {
+background: linear-gradient(45deg, #03070c 0%,#07121d 50%,#0a2334 63%,#184267 85%, #176485 95%, #176485cc 100%); /* W3C */
+}
+10% {
+    background: linear-gradient(55deg, #03070c 0%,#07121d 50%,#0a2334 63%,#184267 85%, #176485 95%, #176485cc 100%); /* W3C */
+}
+20% {
+    background: linear-gradient(55deg, #03070c 0%,#07121d 50%,#0a2334 63%,#184267 85%, #176485 95%, #176485cc 100%); /* W3C */
+}
+30% {
+    background: linear-gradient(65deg, #03070c 0%,#07121d 50%,#0a2334 63%,#184267 85%, #176485 95%, #176485cc 100%); /* W3C */
+}
+40% {
+    background: linear-gradient(65deg, #03070c 0%,#07121d 50%,#0a2334 63%,#184267 85%, #176485 95%, #176485cc 100%); /* W3C */
+}
+50% {
+    background: linear-gradient(70deg, #03070c 0%,#07121d 50%,#0a2334 63%,#184267 85%, #176485 95%, #176485cc 100%); /* W3C */
+}
+60% {
+    background: linear-gradient(65deg, #03070c 0%,#07121d 50%,#0a2334 63%,#184267 85%, #176485 95%, #176485cc 100%); /* W3C */
+}
+70% {
+    background: linear-gradient(65deg, #03070c 0%,#07121d 50%,#0a2334 63%,#184267 85%, #176485 95%, #176485cc 100%); /* W3C */
+}
+80% {
+    background: linear-gradient(55deg, #03070c 0%,#07121d 50%,#0a2334 63%,#184267 85%, #176485 95%, #176485cc 100%); /* W3C */
+}
+90% {
+    background: linear-gradient(55deg, #03070c 0%,#07121d 50%,#0a2334 63%,#184267 85%, #176485 95%, #176485cc 100%); /* W3C */
+}
+100% {
+background: linear-gradient(45deg, #03070c 0%,#07121d 50%,#0a2334 63%,#184267 85%, #176485 95%, #176485cc 100%); /* W3C */
+}
+}
 
         div{
   box-sizing:border-box;
@@ -315,9 +355,10 @@ outline: dashed rgba(32, 32, 32, 0.85) 15px;
         #Heading {
             text-align: left;
             margin-top: 10%;
+            margin-bottom: 2%;
             font-family: 'DM Serif Display', serif;
             font-size: 2.5vmax;
-            color: rgba(0,0,0,0.79);
+            color: rgba(235, 235, 235, 0.79);
             letter-spacing: 3px;
             margin-left: 15px
         }
@@ -352,13 +393,13 @@ outline: dashed rgba(32, 32, 32, 0.85) 15px;
     margin-top: 12vmax;
     font-family: 'Changa', sans-serif;
     font-size: 2.5vmax;
-    color: rgba(0, 0, 0, 0.67);
+    color: rgba(255, 255, 255, 0.67);
     letter-spacing: 3px;
     margin-left: 15px;
 }
 
 #servicesPara {
-    color: black;
+    color: #ffffff;
     text-align: center;
     margin: 5vmax 5px;
     font-family: 'Noto Sans JP', sans-serif;
@@ -400,7 +441,7 @@ outline: dashed rgba(32, 32, 32, 0.85) 15px;
             position: relative;
             width: 100%;
             height: 100vh;
-            margin-top: 3%;
+            margin-top: 14vmax;
         }
 
         #picCircle {
@@ -425,7 +466,7 @@ outline: dashed rgba(32, 32, 32, 0.85) 15px;
             background-position: top right;
             background-attachment: scroll;
             width: 100%;height: 70vh;
-            margin-top: 13vmax;
+            margin-top: 20vmax;
             padding: 2%;
 
         }
@@ -483,7 +524,7 @@ outline: dashed rgba(32, 32, 32, 0.85) 15px;
 
 <div id="anchor" style="margin-top: 15vh">
 
-    <h1  style="text-align: center; font-family: 'Press Start 2P', cursive; font-size: 3vmax; text-shadow: 2px 2px 4px #000000; color: black; word-spacing: 7px; line-height: 5vmax; letter-spacing: 5px ">EVERY PIXEL HAS A STORY TO TELL</h1>
+    <h1  style="text-align: center; font-family: 'Press Start 2P', cursive; font-size: 3vmax; text-shadow: 2px 2px 4px #ffffff; color: #fdfdfd; word-spacing: 7px; line-height: 5vmax; letter-spacing: 5px ">EVERY PIXEL HAS A STORY TO TELL</h1>
 
 
 
@@ -495,7 +536,7 @@ outline: dashed rgba(32, 32, 32, 0.85) 15px;
 
 <main>
 
-<div id="reels" style="border: 1px black solid; height: 90vh; width: 100%; background-color: #184267; margin-top: 5%">
+<div id="reels" style="border: 1px black solid; height: 90vh; width: 100%; background-color: #deecf4; margin-top: 5%">
 
 </div>
     <h1 id="Heading">OUR CLIENTS, <span style="color: #ff2520">OUR LEGACY</span></h1>
